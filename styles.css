@@ -3773,6 +3773,23 @@ body {
   border-radius: 22px 22px 22px 0;
 }
 
+.comment--single,
+.comment--single.is-active {
+  background: #ffffff;
+}
+
+.comment--single .comment__name,
+.comment--single .comment__text,
+.comment--single.is-active .comment__name,
+.comment--single.is-active .comment__text {
+  color: #1a1a1a;
+}
+
+.comment--single .comment__time,
+.comment--single.is-active .comment__time {
+  color: #8c8c8c;
+}
+
 .comment--single .comment__avatar {
   width: 40px;
   height: 40px;
@@ -3807,7 +3824,7 @@ body {
   position: fixed;
   left: 50%;
   bottom: calc(86px + env(safe-area-inset-bottom));
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(18px);
   z-index: 999;
 
   width: fit-content;
@@ -3821,6 +3838,18 @@ body {
 
   border-radius: 16px;
   overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: none !important;
+}
+
+.hero-social.is-mobile-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .hero-social__item,
@@ -4260,9 +4289,42 @@ body {
     line-height: 1.35;
   }
 
+  .mobile-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(8px);
+    transition:
+      opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform, filter;
+  }
+
+  .mobile-reveal.is-mobile-in-view {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .hero-head.mobile-reveal {
+    transform: translateX(-50%) translateY(16px);
+  }
+
+  .hero-head.mobile-reveal.is-mobile-in-view {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .mobile-reveal:nth-child(2) {
+    transition-delay: 0.06s;
+  }
+
+  .mobile-reveal:nth-child(3) {
+    transition-delay: 0.12s;
+  }
+
   /* Footer */
-  .footer__top,
-  .footer__group {
+  .footer__top:not(.mobile-reveal),
+  .footer__group:not(.mobile-reveal) {
     opacity: 1;
     transform: none;
     transition: none;

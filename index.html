@@ -130,7 +130,7 @@
 
   <!-- mobile -->
   <div class="hero-comments__mobile">
-    <div class="comment comment--single">
+    <div class="comment comment--single is-active">
       <img src="images/avatar.png" alt="" class="comment__avatar" />
 
       <div class="comment__body">
@@ -1318,9 +1318,72 @@ document.addEventListener("DOMContentLoaded", () => {
     showLayoutGrid();
   });
 
+  function initMobileExperience() {
+    if (!window.matchMedia("(max-width: 767px)").matches) return;
+
+    const mobileComment = $(".hero-comments__mobile .comment");
+    if (mobileComment) mobileComment.classList.add("is-active");
+
+    const mobileSocial = $(".hero-social");
+    let socialShown = false;
+    let lastScrollY = window.scrollY || window.pageYOffset;
+
+    function revealSocialOnScroll() {
+      if (!mobileSocial || socialShown) return;
+      const currentScrollY = window.scrollY || window.pageYOffset;
+      if (currentScrollY > lastScrollY && currentScrollY > 8) {
+        socialShown = true;
+        mobileSocial.classList.add("is-mobile-visible");
+        window.removeEventListener("scroll", revealSocialOnScroll);
+      }
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", revealSocialOnScroll, { passive: true });
+
+    const revealItems = [
+      ".hero-title",
+      ".hero-head",
+      ".hero-comments__mobile",
+      ".about-section__top",
+      ".about-clients",
+      ".projects-section__title",
+      ".project-card__link",
+      ".cta__card",
+      ".cta__decor",
+      ".footer__top",
+      ".footer__group"
+    ];
+
+    const elements = revealItems.flatMap((selector) => $$(selector));
+    elements.forEach((element) => element.classList.add("mobile-reveal"));
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-mobile-in-view");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.16,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    elements.forEach((element) => revealObserver.observe(element));
+  }
+
+  initMobileExperience();
+
   // РљР»РёРєРё РїРѕ РєРѕРјРјРµРЅС‚Р°СЂРёСЏРј
   $$(".comment").forEach((comment) => {
     comment.addEventListener("click", () => {
+      if (comment.classList.contains("comment--single")) {
+        comment.classList.add("is-active");
+        return;
+      }
       comment.classList.toggle("is-active");
     });
   });
