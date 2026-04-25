@@ -1,0 +1,2227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <div class="initial-loader" id="initial-loader" aria-hidden="true">
+    <div class="initial-loader__content">
+      <div class="initial-loader__title">
+        <span class="initial-loader__italic" data-i18n="hero.eyebrow">hey,</span>
+        <span class="initial-loader__main" data-i18n="hero.title">it's Dmitrii</span>
+      </div>
+      <div class="initial-loader__bar">
+        <span class="initial-loader__progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="traffic-lights" aria-hidden="true">
+        <span class="traffic-lights__dot traffic-lights__dot--red"></span>
+        <span class="traffic-lights__dot traffic-lights__dot--yellow"></span>
+        <span class="traffic-lights__dot traffic-lights__dot--green"></span>
+      </div>
+
+      <nav class="topbar__nav" aria-label="Main navigation" data-i18n-aria-label="aria.mainNavigation">
+        <a href="#home" class="topbar__cell topbar__cell--icon topbar__home" aria-label="Home" data-i18n-aria-label="nav.home">
+          <img src="images/icons/home.svg" alt="" />
+        </a>
+
+        <a href="#about" class="topbar__cell topbar__link" data-i18n="nav.about">About</a>
+        <a href="#projects" class="topbar__cell topbar__link" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" class="topbar__cell topbar__link" data-i18n="nav.contact">Contact</a>
+
+        <button class="topbar__cell topbar__cell--icon topbar__plus" type="button" aria-label="Open menu" data-i18n-aria-label="aria.openMenu">
+          <img src="images/icons/plus.svg" alt="" />
+        </button>
+      </nav>
+    </div>
+
+    <div class="topbar__right">
+      <div class="lang-switcher" role="tablist" aria-label="Language switcher" data-i18n-aria-label="aria.languageSwitcher">
+        <button
+          class="lang-switcher__btn is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-lang="en"
+        >
+          <img src="images/lang-en.png" alt="" class="lang-switcher__flag" />
+          <span data-i18n="language.english">English</span>
+        </button>
+
+        <button
+          class="lang-switcher__btn"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-lang="ru"
+        >
+          <img src="images/lang-ru.png" alt="" class="lang-switcher__flag" />
+          <span data-i18n="language.russian">Russian</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="share-widget">
+    <div class="share-widget__avatars">
+      <span class="avatar avatar--purple">A</span>
+      <span class="avatar avatar--blue">E</span>
+      <span class="avatar avatar--pink">C</span>
+
+      <span class="avatar avatar--photo">
+        <img src="images/avatar.png" alt="" />
+      </span>
+    </div>
+
+    <button class="share-widget__button" id="share-trigger" data-i18n="share.button">Share</button>
+  </div>
+
+  <main>
+  <section class="hero" id="home">
+    <h1 class="hero-title">
+      <span class="hero-italic" data-i18n="hero.eyebrow">hey,</span>
+      <span class="hero-main" data-i18n="hero.title">it's Dmitrii</span>
+    </h1>
+
+    <div class="hero-comments">
+  <!-- desktop -->
+  <div class="hero-comments__desktop">
+    <div class="comment comment--top">
+      <img src="images/avatar.png" alt="" class="comment__avatar" />
+
+      <div class="comment__body">
+        <div class="comment__meta">
+          <span class="comment__name">Dmitrii Mikhailov</span>
+          <span class="comment__time" data-i18n="hero.justNow">Just now</span>
+        </div>
+
+        <p class="comment__text" data-i18n="hero.commentOne">I'm Senior UI/UX Designer from Siberia</p>
+      </div>
+    </div>
+
+    <div class="comment comment--bottom">
+      <img src="images/avatar.png" alt="" class="comment__avatar" />
+
+      <div class="comment__body">
+        <div class="comment__meta">
+          <span class="comment__name">Dmitrii Mikhailov</span>
+          <span class="comment__time" data-i18n="hero.justNow">Just now</span>
+        </div>
+
+        <p class="comment__text" data-i18n="hero.commentTwo">Crafting intuitive interfaces with a Siberian soul</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile -->
+  <div class="hero-comments__mobile">
+    <div class="comment comment--single">
+      <img src="images/avatar.png" alt="" class="comment__avatar" />
+
+      <div class="comment__body">
+        <div class="comment__meta">
+          <span class="comment__name">Dmitrii Mikhailov</span>
+          <span class="comment__time" data-i18n="hero.justNow">Just now</span>
+        </div>
+
+        <p class="comment__text" data-i18n="hero.commentMobile">
+          I'm Senior UI/UX Designer from Siberia.
+          Crafting intuitive interfaces with a Siberian soul
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="hero-head">
+      <img src="images/head.png" alt="" class="hero-head__img" />
+      <div class="hero-head__tooltip" aria-hidden="true">Layer renamed.</div>
+
+      <svg class="hero-horn hero-horn--left" viewBox="0 0 137 189" aria-hidden="true">
+        <path
+          class="hero-horn__stroke hero-horn__stroke--left"
+          d="M132.999 135.58C98.3178 119.519 26.8623 70.7167 18.4896 4C3.50892 34.6815 -12.7851 113.835 41.884 185"
+        />
+      </svg>
+
+      <svg class="hero-horn hero-horn--right" viewBox="0 0 137 189" aria-hidden="true">
+        <path
+          class="hero-horn__stroke hero-horn__stroke--right"
+          d="M4.00098 135.58C38.6822 119.519 110.138 70.7167 118.51 4C133.491 34.6815 149.785 113.835 95.116 185"
+        />
+      </svg>
+
+      <svg class="hero-eye-lines" viewBox="0 0 120 90" aria-hidden="true">
+        <path class="hero-eye-lines__stroke hero-eye-lines__stroke--1" d="M10 40 L40 20" />
+        <path class="hero-eye-lines__stroke hero-eye-lines__stroke--2" d="M20 60 L80 60" />
+        <path class="hero-eye-lines__stroke hero-eye-lines__stroke--3" d="M10 80 L40 100" />
+      </svg>
+    </div>
+
+    <button class="contact-btn" data-i18n="hero.contactButton">
+      Contact me
+    </button>
+  </section>
+
+<section class="about-section" id="about">
+  <div class="about-sticky">
+    <div class="about-screen">
+      <div class="about-section__inner">
+        <div class="about-section__top">
+          <div class="about-collage">
+            <div class="about-card about-card--back">
+              <img src="images/photo-1.jpg" class="about-card__photo" alt="" />
+              <img
+                src="images/about-decor-1.png"
+                class="about-card__decor about-card__decor--top-left"
+                alt=""
+              />
+            </div>
+
+            <div class="about-card about-card--front">
+              <img src="images/photo-2.jpg" class="about-card__photo" alt="" />
+              <img
+                src="images/about-decor-2.png"
+                class="about-card__decor about-card__decor--top-right"
+                alt=""
+              />
+              <img
+                src="images/about-decor-3.png"
+                class="about-card__decor about-card__decor--bottom-left"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <h2 class="about-title">
+              <span class="about-title__main" data-i18n="about.titleMain">about</span>
+              <span class="about-title__accent" data-i18n="about.titleAccent">me</span>
+            </h2>
+
+            <p class="about-lead" data-i18n="about.lead">
+              I design sophisticated interfaces and digital solutions,
+              primarily in the FinTech and MedTech
+            </p>
+
+            <p class="about-text" data-i18n="about.text">
+              Outside of work, I enjoy traveling - I've been to over 10 countries.
+              Asia holds a special place in my heart: its culture, visual aesthetics,
+              and problem-solving methods. All of this significantly impacts my design
+              sense and visual acuity.
+            </p>
+
+            <div class="about-skills">
+              <div class="about-skills__label" data-i18n="about.skillsLabel">with my skills</div>
+
+              <div class="about-skills__rows">
+                <img
+                  src="images/row-1.svg"
+                  class="about-skills__row about-skills__row--1"
+                  alt=""
+                />
+                <img
+                  src="images/row-2.svg"
+                  class="about-skills__row about-skills__row--2"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-clients">
+        <div class="about-clients__title" data-i18n="about.clientsTitle">Clients I've worked with</div>
+
+        <div class="about-clients__marquee">
+          <div class="about-clients__track">
+            <img src="images/clients/lifetimehealth.svg" alt="" />
+            <img src="images/clients/tbank.svg" alt="" />
+            <img src="images/clients/atomyze.svg" alt="" />
+            <img src="images/clients/megafon.svg" alt="" />
+            <img src="images/clients/mts.svg" alt="" />
+            <img src="images/clients/libresse.svg" alt="" />
+            <img src="images/clients/asics.svg" alt="" />
+
+            <img src="images/clients/lifetimehealth.svg" alt="" />
+            <img src="images/clients/tbank.svg" alt="" />
+            <img src="images/clients/atomyze.svg" alt="" />
+            <img src="images/clients/megafon.svg" alt="" />
+            <img src="images/clients/mts.svg" alt="" />
+            <img src="images/clients/libresse.svg" alt="" />
+            <img src="images/clients/asics.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-social">
+  <a href="#home" class="hero-social__item hero-social__item--active" aria-label="Move" data-i18n-aria-label="aria.move">
+    <img src="images/icons/Icon.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__tooltip hero-social__tooltip--move">
+      <img src="images/tooltips/move.svg" alt="Move" />
+    </span>
+  </a>
+
+  <a href="https://dribbble.com/MikhaylovArt" target="_blank" rel="noopener noreferrer" class="hero-social__item" aria-label="Dribbble">
+    <img src="images/icons/dribbble.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__tooltip hero-social__tooltip--dribbble">
+      <img src="images/tooltips/Dribbble.svg" alt="Dribbble" />
+    </span>
+  </a>
+
+  <a href="https://www.behance.net/MikhaylovArt" target="_blank" rel="noopener noreferrer" class="hero-social__item" aria-label="Behance">
+    <img src="images/icons/behance.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__tooltip hero-social__tooltip--behance">
+      <img src="images/tooltips/Behance.svg" alt="Behance" />
+    </span>
+  </a>
+
+  <a href="https://www.linkedin.com/in/dmitry-mikhaylov-57a017340" target="_blank" rel="noopener noreferrer" class="hero-social__item" aria-label="LinkedIn">
+    <img src="images/icons/Linkedin.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__tooltip hero-social__tooltip--linkedin">
+      <img src="images/tooltips/Linkedin.svg" alt="LinkedIn" />
+    </span>
+  </a>
+
+  <a href="https://t.me/MikhaylovArt" target="_blank" rel="noopener noreferrer" class="hero-social__item" aria-label="Telegram">
+    <img src="images/icons/Telegram.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__tooltip hero-social__tooltip--telegram">
+      <img src="images/tooltips/Telegram.svg" alt="Telegram" />
+    </span>
+  </a>
+
+  <span class="hero-social__separator" aria-hidden="true"></span>
+
+  <button class="hero-social__comment" type="button" aria-label="Comment" data-i18n-aria-label="aria.comment">
+    <img src="images/icons/comment.svg" alt="" class="hero-social__icon" />
+    <span class="hero-social__comment-dot"></span>
+    <span class="hero-social__resolved-tooltip" data-i18n="easterEggs.commentsResolved">Comments resolved.</span>
+    <span class="hero-social__tooltip hero-social__tooltip--comment">
+      <img src="images/tooltips/Comment.svg" alt="Comment" />
+    </span>
+  </button>
+</div>
+
+
+
+<section class="projects-section" id="projects">
+  <div class="projects-section__inner">
+    <h2 class="projects-section__title" data-i18n="projects.title">projects</h2>
+
+    <div class="projects-grid">
+      <article class="project-card project-card--1">
+        <a href="https://www.figma.com/community/file/1097525503669326714/iconex-freebie-icons" target="_blank" rel="noopener noreferrer" class="project-card__link">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/freebie-icon-pack.jpg"
+              alt="Freebie icon pack"
+              data-i18n-alt="projects.freebie.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.freebie.title">Freebie icon pack</h3>
+              <p class="project-card__description" data-i18n="projects.freebie.description">Edited 1 year ago</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card project-card--2">
+        <a href="https://lifetimehealth.in/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/lifetimehealth-web.jpg"
+              alt="LifetimeHealth web"
+              data-i18n-alt="projects.lifetimeWeb.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.lifetimeWeb.title">LifetimeHealth web</h3>
+              <p class="project-card__description" data-i18n="projects.lifetimeWeb.description">Edited 4 months ago</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card project-card--3">
+        <a class="project-card__link project-card__link--disabled" aria-disabled="true" tabindex="-1">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/lifetimehealth-design-system.jpg"
+              alt="LifetimeHealth design system"
+              data-i18n-alt="projects.designSystem.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.designSystem.title">LifetimeHealth design system</h3>
+              <p class="project-card__description" data-i18n="projects.designSystem.description">Soon</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card project-card--4">
+        <a href="https://atomyze.ru" target="_blank" rel="noopener noreferrer" class="project-card__link">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/atomyze-web.jpg"
+              alt="Atomyze web"
+              data-i18n-alt="projects.atomyze.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.atomyze.title">Atomyze web</h3>
+              <p class="project-card__description" data-i18n="projects.atomyze.description">Edited 8 months ago</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card project-card--5">
+        <a href="https://apps.apple.com/us/app/lifetime-health/id6496204102" target="_blank" rel="noopener noreferrer" class="project-card__link">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/lifetimehealth-app.jpg"
+              alt="LifetimeHealth App"
+              data-i18n-alt="projects.lifetimeApp.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.lifetimeApp.title">LifetimeHealth App</h3>
+              <p class="project-card__description" data-i18n="projects.lifetimeApp.description">Edited 3 months ago</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card project-card--6">
+        <a href="#" class="project-card__link js-open-contact">
+          <div class="project-card__image-frame">
+            <img
+              src="images/projects/your-design.jpg"
+              alt="Your design?"
+              data-i18n-alt="projects.yourDesign.title"
+              class="project-card__image"
+            />
+          </div>
+
+          <div class="project-card__divider"></div>
+
+          <div class="project-card__info">
+            <div class="project-card__icon">
+              <img src="images/icons/file-blue.svg" alt="" />
+            </div>
+
+            <div class="project-card__text">
+              <h3 class="project-card__title" data-i18n="projects.yourDesign.title">Your design?</h3>
+              <p class="project-card__description" data-i18n="projects.yourDesign.description">Click to contact me</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta" id="contact">
+  <div class="cta__decor cta__decor--left">
+    <img src="images/contact-tool-left.png" alt="" />
+  </div>
+
+  <div class="cta__card">
+    <h2 data-i18n="cta.title">Let's talk about</h2>
+
+<div class="cta__words">
+  <div class="talk-svg">
+    <img src="images/ideas.svg" alt="Ideas" data-i18n-alt="cta.ideasAlt" />
+  </div>
+  <div class="talk-svg">
+    <img src="images/solutions.svg" alt="Solutions" data-i18n-alt="cta.solutionsAlt" />
+  </div>
+  <div class="talk-svg">
+    <img src="images/everything.svg" alt="Everything" data-i18n-alt="cta.everythingAlt" />
+  </div>
+</div>
+
+    <a href="#" class="cta__btn" data-i18n="cta.button">Let's connect</a>
+  </div>
+
+  <div class="cta__decor cta__decor--right">
+    <img src="images/contact-tool-right.png" alt="" />
+  </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand" data-i18n="footer.brand">Dmitrii Mikhaylov - Product Designer</div>
+      <div class="footer__copyright" data-i18n="footer.copyright">© 2026 All rights reserved</div>
+    </div>
+
+    <div class="footer__bottom">
+      
+      <div class="footer__group">
+        <h3 class="footer__heading" data-i18n="footer.quickLinks">Quick Links</h3>
+        <div class="footer__links">
+          <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
+          <a href="#about" class="footer__link" data-i18n="nav.about">About</a>
+          <a href="#projects" class="footer__link" data-i18n="nav.projects">Projects</a>
+          <a href="#contact" class="footer__link" data-i18n="nav.contactPlural">Contacts</a>
+        </div>
+      </div>
+
+<div class="footer__group">
+  <h3 class="footer__heading" data-i18n="footer.social">Social</h3>
+  <div class="footer__links">
+    <a href="https://dribbble.com/MikhaylovArt" class="footer__link" target="_blank" rel="noopener noreferrer">Dribbble</a>
+    <a href="https://www.behance.net/MikhaylovArt" class="footer__link" target="_blank" rel="noopener noreferrer">Behance</a>
+    <a href="https://www.linkedin.com/in/dmitry-mikhaylov-57a017340" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</div>
+
+      <div class="footer__group">
+        <h3 class="footer__heading" data-i18n="footer.contact">Contact</h3>
+        <div class="footer__links">
+          <a href="mailto:mikhaylovdesign@gmail.com" class="footer__link">mikhaylovdesign@gmail.com</a>
+          <a href="https://t.me/MikhaylovArt" class="footer__link" target="_blank" rel="noopener noreferrer">t.me/MikhaylovArt</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+<div class="figma-cursor" id="figma-cursor">
+  <img src="images/Cursors/blue.svg" alt="" class="figma-cursor__pointer" id="cursor-img" />
+  
+  <div class="figma-cursor__name" id="cursor-name">Sub-Zero</div>
+</div>
+
+<div class="undo-toast" id="undo-toast" aria-live="polite" aria-hidden="true"></div>
+<div class="layout-grid-overlay" id="layout-grid-overlay" aria-hidden="true"></div>
+
+
+<div class="share-modal" id="share-modal">
+  <div class="share-modal__overlay" id="share-overlay"></div>
+  <div class="share-modal__content">
+    
+    <div class="share-modal__header">
+      <span class="share-modal__title" data-i18n="share.title">Share this site</span>
+      <div class="share-modal__header-actions">
+        <button class="share-modal__copy-link" type="button">
+          <img src="images/icons/link.svg" alt="" /> <span data-i18n="share.copyLink">Copy Link</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="share-modal__access-status">
+      <img src="images/icons/lock.svg" alt="" class="share-modal__lock-icon">
+      <span data-i18n="share.accessStatus">Only invited people can access</span>
+    </div>
+
+    <div class="share-modal__user-list">
+      
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/avatar.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Dmitrii Mikhailov</span>
+        </div>
+        <span class="share-modal__role" data-i18n="share.owner">Owner</span>
+      </div>
+
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/Elon.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Elon Musk</span>
+        </div>
+        <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
+      </div>
+
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/Mark.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Mark Zuckerberg</span>
+        </div>
+        <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
+      </div>
+
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/Bill.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Bill Gates</span>
+        </div>
+        <div class="share-modal__dropdown" data-i18n="share.canEdit">Can edit</div>
+      </div>
+
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/Tim.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Tim Cook</span>
+        </div>
+        <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
+      </div>
+
+      <div class="share-modal__user">
+        <div class="share-modal__user-info">
+          <img src="images/Sam.png" alt="" class="share-modal__avatar">
+          <span class="share-modal__name">Sam Altman</span>
+        </div>
+        <div class="share-modal__dropdown" data-i18n="share.canEdit">Can edit</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="easter-modal" id="easter-modal">
+  <div class="easter-modal__overlay" id="easter-overlay"></div>
+  <div class="easter-modal__content">
+    
+    <div class="easter-modal__image-container">
+      <img src="images/curious-cat.png" alt="Curious Cat" class="easter-modal__image" data-i18n-alt="easter.imageAlt">
+      <div class="ios-spinner">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+
+    <h3 class="easter-modal__title" data-i18n="easter.title">You're pretty curious</h3>
+    <p class="easter-modal__text" data-i18n-html="easter.text">
+      I love discovering new and interesting things too. <br>
+      Isn't this the perfect sign to discuss a new project?
+    </p>
+
+    <a href="#contact" class="easter-modal__btn" id="easter-connect" data-i18n="cta.button">Let's connect</a>
+  </div>
+</div>
+
+<div id="project-popup" class="project-modal">
+  <div class="project-modal__overlay"></div>
+  <div class="project-modal__content">
+    <div class="project-modal__image-container">
+      <img src="images/popup-header.png" alt="New Project" class="project-modal__image" data-i18n-alt="projectModal.imageAlt">
+    </div>
+    <div class="project-modal__title" data-i18n="projectModal.title">New project?</div>
+    <div class="project-modal__text" data-i18n-html="projectModal.text">
+      I'm already in Figma, just waiting for your "Go". <br>
+      Let's build something amazing together!
+    </div>
+    <a href="#contact" class="project-modal__btn" data-i18n="projectModal.button">Let's discuss the details</a>
+  </div>
+</div>
+
+<div id="contact-popup" class="project-modal">
+  <div class="project-modal__overlay"></div>
+  <div class="project-modal__content">
+    <div class="project-modal__image-container">
+      <img src="images/contact-header.png" alt="Contact me" class="project-modal__image" data-i18n-alt="contactModal.imageAlt">
+    </div>
+    
+    <div class="project-modal__title" data-i18n="contactModal.title">Let's build something great</div>
+    <div class="project-modal__text" data-i18n="contactModal.text">Choose your preferred way to connect</div>
+    
+    <div class="contact-modal__actions">
+      <a href="mailto:mikhaylovdesign@gmail.com" class="contact-modal__btn contact-modal__btn--outline" data-i18n="contactModal.email">Email</a>
+      <a href="https://t.me/MikhaylovArt" target="_blank" class="contact-modal__btn contact-modal__btn--primary">Telegram</a>
+    </div>
+  </div>
+</div>
+
+<div id="easter-reward-popup" class="easter-reward-modal">
+  <div class="easter-reward-modal__overlay"></div>
+  <div class="easter-reward-modal__content">
+    <div class="easter-reward-modal__image-container">
+      <img src="images/cup.png" alt="Trophy" class="easter-reward-modal__image" data-i18n-alt="reward.imageAlt">
+    </div>
+
+    <div class="easter-reward-modal__title" data-i18n="reward.title">
+      Wow! You've unlocked all the Easter eggs!
+    </div>
+    <div class="easter-reward-modal__text" data-i18n-html="reward.text">
+      That deserves a small reward. Send me <strong>"I found all the Easter eggs on the site"</strong> to get 10% OFF your project
+    </div>
+
+    <div class="easter-reward-modal__actions">
+      <a href="mailto:mikhaylovdesign@gmail.com?subject=I%20found%20all%20the%20Easter%20eggs%20on%20the%20site" class="easter-reward-modal__btn easter-reward-modal__btn--outline" data-i18n="contactModal.email">Email</a>
+      <a href="https://t.me/MikhaylovArt" target="_blank" rel="noopener noreferrer" class="easter-reward-modal__btn easter-reward-modal__btn--primary">Telegram</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // 1. РџСЂРѕРІРµСЂРєР° РЅР° РґРµСЃРєС‚РѕРї
+  if (window.innerWidth <= 1024) return;
+
+  const cursor = document.getElementById('figma-cursor');
+  const cursorImg = document.getElementById('cursor-img');
+  const cursorName = document.getElementById('cursor-name');
+
+  // Cursor character presets.
+  const characters = [
+    { name: { en: 'Sub-Zero', ru: 'Саб-Зиро' }, color: '#007BE5', textColor: '#FFFFFF', file: 'blue.svg' },
+    { name: { en: 'Bart Simpson', ru: 'Барт Симпсон' }, color: '#FFD90F', textColor: '#000000', file: 'yellow.svg' },
+    { name: { en: 'Thanos', ru: 'Танос' }, color: '#A020F0', textColor: '#FFFFFF', file: 'purple.svg' },
+    { name: { en: 'Pink Panther', ru: 'Розовая Пантера' }, color: '#FF69B4', textColor: '#FFFFFF', file: 'pink.svg' },
+    { name: { en: 'Spider-Man', ru: 'Человек-паук' }, color: '#FF4500', textColor: '#FFFFFF', file: 'orange.svg' },
+    { name: { en: 'The Grinch', ru: 'Гринч' }, color: '#00A86B', textColor: '#FFFFFF', file: 'green.svg' }
+  ];
+
+  // 3. Р›РѕРіРёРєР° РІС‹Р±РѕСЂР°: Р±РµСЂРµРј РёРЅРґРµРєСЃ РёР· РїР°РјСЏС‚Рё Р±СЂР°СѓР·РµСЂР°
+  let index = localStorage.getItem('figmaCursorIndex');
+  index = index ? parseInt(index) : 0;
+
+  // Apply current cursor character.
+  const current = characters[index];
+  const getCursorLanguage = () => {
+    if (window.currentSiteLanguage === 'ru') return 'ru';
+    return localStorage.getItem('siteLanguage') === 'ru' ? 'ru' : 'en';
+  };
+  const updateCursorName = () => {
+    cursorName.textContent = current.name[getCursorLanguage()];
+  };
+
+  updateCursorName();
+  window.updateFigmaCursorLanguage = updateCursorName;
+  cursorImg.src = 'images/Cursors/' + current.file;
+  document.documentElement.style.setProperty('--cursor-color', current.color);
+  cursorName.style.color = current.textColor;
+
+  // РЎРѕС…СЂР°РЅСЏРµРј СЃР»РµРґСѓСЋС‰РёР№ РёРЅРґРµРєСЃ (РїРѕ РєСЂСѓРіСѓ)
+  const nextIndex = (index + 1) % characters.length;
+  localStorage.setItem('figmaCursorIndex', nextIndex);
+
+  // 4. Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°
+  let active = false;
+  window.addEventListener('mousemove', (e) => {
+    if (!active) {
+      cursor.classList.add('is-visible');
+      active = true;
+    }
+    cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  });
+
+  // РџСЂСЏС‡РµРј, РµСЃР»Рё РјС‹С€СЊ СѓС€Р»Р° РёР· РѕРєРЅР°
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.remove('is-visible');
+    active = false;
+  });
+})();
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ==========================================
+  // 1. Р‘РђР—РћР’Р«Р• РЈРўРР›РРўР« Р РљР РР’Р«Р• (EASING)
+  // ==========================================
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+  // РџСЂРµРјРёР°Р»СЊРЅС‹Рµ РєСЂРёРІС‹Рµ РґР»СЏ РґРѕСЂРѕРіРѕР№ Р°РЅРёРјР°С†РёРё
+  const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+  const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+  const clamp = (v, min = 0, max = 1) => Math.min(Math.max(v, min), max);
+
+  // РЈРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ Р°РЅРёРјР°С†РёРё CSS-РїРµСЂРµРјРµРЅРЅС‹С…
+  function animateVar(el, name, {
+    from = 0,
+    to = 1,
+    delay = 0,
+    duration = 1200,
+    easing = easeOutExpo
+  }) {
+    const startTime = performance.now() + delay;
+
+    function tick(now) {
+      const elapsed = now - startTime;
+      if (elapsed <= 0) {
+        requestAnimationFrame(tick);
+        return;
+      }
+
+      const t = clamp(elapsed / duration);
+      const value = from + (to - from) * easing(t);
+      el.style.setProperty(name, value.toFixed(4));
+
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Р¤СѓРЅРєС†РёСЏ РїР»Р°РІРЅРѕР№ РѕС‚СЂРёСЃРѕРІРєРё SVG-Р»РёРЅРёР№ (Web Animations API)
+  function animateStroke(selector, duration = 1200, delay = 0) {
+    $$(selector).forEach((el) => {
+      const length = el.getTotalLength();
+      el.style.strokeDasharray = length;
+      el.style.strokeDashoffset = length;
+
+      el.animate(
+        [
+          { strokeDashoffset: length },
+          { strokeDashoffset: 0 }
+        ],
+        {
+          duration,
+          delay,
+          easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+          fill: "forwards"
+        }
+      );
+    });
+  }
+
+  // ==========================================
+  // 2. HERO
+  // ==========================================
+
+  const translations = {
+    en: {
+      language: {
+        english: "English",
+        russian: "Russian"
+      },
+      nav: {
+        home: "Home",
+        about: "About",
+        projects: "Projects",
+        contact: "Contact",
+        contactPlural: "Contacts"
+      },
+      aria: {
+        mainNavigation: "Main navigation",
+        openMenu: "Open menu",
+        languageSwitcher: "Language switcher",
+        move: "Move",
+        comment: "Comment"
+      },
+      hero: {
+        eyebrow: "hey,",
+        title: "it's Dmitrii",
+        justNow: "Just now",
+        commentOne: "I'm Senior UI/UX Designer from Siberia",
+        commentTwo: "Crafting intuitive interfaces with a Siberian soul",
+        commentMobile: "I'm Senior UI/UX Designer from Siberia. Crafting intuitive interfaces with a Siberian soul",
+        contactButton: "Contact me"
+      },
+      about: {
+        titleMain: "about",
+        titleAccent: "me",
+        lead: "I design sophisticated interfaces and digital solutions, primarily in the FinTech and MedTech",
+        text: "Outside of work, I enjoy traveling - I've been to over 10 countries. Asia holds a special place in my heart: its culture, visual aesthetics, and problem-solving methods. All of this significantly impacts my design sense and visual acuity.",
+        skillsLabel: "with my skills",
+        clientsTitle: "Clients I've worked with"
+      },
+      projects: {
+        title: "projects",
+        freebie: {
+          title: "Freebie icon pack",
+          description: "Edited 1 year ago"
+        },
+        lifetimeWeb: {
+          title: "LifetimeHealth web",
+          description: "Edited 4 months ago"
+        },
+        designSystem: {
+          title: "LifetimeHealth design system",
+          description: "Soon"
+        },
+        atomyze: {
+          title: "Atomyze web",
+          description: "Edited 8 months ago"
+        },
+        lifetimeApp: {
+          title: "LifetimeHealth App",
+          description: "Edited 3 months ago"
+        },
+        yourDesign: {
+          title: "Your design?",
+          description: "Click to contact me"
+        }
+      },
+      cta: {
+        title: "Let's talk about",
+        button: "Let's connect",
+        ideasAlt: "Ideas",
+        solutionsAlt: "Solutions",
+        everythingAlt: "Everything"
+      },
+      footer: {
+        brand: "Dmitrii Mikhaylov - Product Designer",
+        copyright: "© 2026 All rights reserved",
+        quickLinks: "Quick Links",
+        social: "Social",
+        contact: "Contact"
+      },
+      share: {
+        button: "Share",
+        title: "Share this site",
+        copyLink: "Copy Link",
+        linkCopied: "Link copied!",
+        accessStatus: "Only invited people can access",
+        owner: "Owner",
+        canView: "Can view",
+        canEdit: "Can edit"
+      },
+      easter: {
+        imageAlt: "Curious Cat",
+        title: "You're pretty curious",
+        text: "I love discovering new and interesting things too. <br> Isn't this the perfect sign to discuss a new project?"
+      },
+      projectModal: {
+        imageAlt: "New Project",
+        title: "New project?",
+        text: "I'm already in Figma, just waiting for your \"Go\". <br> Let's build something amazing together!",
+        button: "Let's discuss the details"
+      },
+      contactModal: {
+        imageAlt: "Contact me",
+        title: "Let's build something great",
+        text: "Choose your preferred way to connect",
+        email: "Email"
+      },
+      reward: {
+        imageAlt: "Trophy",
+        title: "Wow! You've unlocked all the Easter eggs!",
+        text: "That deserves a small reward. Send me <strong>\"I found all the Easter eggs on the site\"</strong> to get 10% OFF your project"
+      },
+      easterEggs: {
+        undoToast: "Nothing to undo. The design is already perfect.",
+        commentsResolved: "Comments resolved."
+      }
+    },
+    ru: {
+      language: {
+        english: "English",
+        russian: "Russian"
+      },
+      nav: {
+        home: "Главная",
+        about: "Обо мне",
+        projects: "Проекты",
+        contact: "Контакты",
+        contactPlural: "Контакты"
+      },
+      aria: {
+        mainNavigation: "Основная навигация",
+        openMenu: "Открыть меню",
+        languageSwitcher: "Переключатель языка",
+        move: "Перейти",
+        comment: "Комментарии"
+      },
+      hero: {
+        eyebrow: "привет,",
+        title: "я Дмитрий",
+        justNow: "Только что",
+        commentOne: "Я Senior UI/UX Designer из Сибири",
+        commentTwo: "Создаю понятные интерфейсы с сибирским характером",
+        commentMobile: "Я Senior UI/UX Designer из Сибири. Создаю понятные интерфейсы с сибирским характером",
+        contactButton: "Написать мне"
+      },
+      about: {
+        titleMain: "обо",
+        titleAccent: "мне",
+        lead: "Я проектирую сложные интерфейсы и цифровые продукты, в основном для FinTech и MedTech",
+        text: "Вне работы я люблю путешествовать - уже побывал более чем в 10 странах. Азия занимает особое место в моем сердце: ее культура, визуальная эстетика и подходы к решению задач заметно влияют на мой дизайн-мышление и визуальную насмотренность.",
+        skillsLabel: "мои навыки",
+        clientsTitle: "Клиенты, с которыми я работал"
+      },
+      projects: {
+        title: "проекты",
+        freebie: {
+          title: "Бесплатный набор иконок",
+          description: "Edited 1 year ago"
+        },
+        lifetimeWeb: {
+          title: "Сайт LifetimeHealth",
+          description: "Edited 4 months ago"
+        },
+        designSystem: {
+          title: "Дизайн-система LifetimeHealth",
+          description: "Soon"
+        },
+        atomyze: {
+          title: "Сайт Atomyze",
+          description: "Edited 8 months ago"
+        },
+        lifetimeApp: {
+          title: "Приложение LifetimeHealth",
+          description: "Edited 3 months ago"
+        },
+        yourDesign: {
+          title: "Ваш дизайн?",
+          description: "Нажмите, чтобы связаться"
+        }
+      },
+      cta: {
+        title: "Давайте обсудим",
+        button: "Написать мне",
+        ideasAlt: "Идеи",
+        solutionsAlt: "Решения",
+        everythingAlt: "Все"
+      },
+      footer: {
+        brand: "Дмитрий Михайлов - Product Designer",
+        copyright: "© 2026 Все права защищены",
+        quickLinks: "Быстрые ссылки",
+        social: "Соцсети",
+        contact: "Контакты"
+      },
+      share: {
+        button: "Share",
+        title: "Поделиться сайтом",
+        copyLink: "Copy Link",
+        linkCopied: "Link copied!",
+        accessStatus: "Only invited people can access",
+        owner: "Owner",
+        canView: "Can view",
+        canEdit: "Can edit"
+      },
+      easter: {
+        imageAlt: "Любопытный кот",
+        title: "Вы довольно любопытны",
+        text: "Я тоже люблю находить новое и интересное. <br> Может, это знак обсудить новый проект?"
+      },
+      projectModal: {
+        imageAlt: "Новый проект",
+        title: "Новый проект?",
+        text: "Я уже в Figma и просто жду вашего \"Go\". <br> Давайте сделаем что-то крутое вместе!",
+        button: "Обсудить детали"
+      },
+      contactModal: {
+        imageAlt: "Связаться",
+        title: "Давайте сделаем что-то классное",
+        text: "Выберите удобный способ связи",
+        email: "Email"
+      },
+      reward: {
+        imageAlt: "Кубок",
+        title: "Вау! Вы нашли все пасхалки!",
+        text: "Это заслуживает небольшой награды. Напишите мне <strong>\"Я нашел все пасхалки на сайте\"</strong>, чтобы получить скидку 10% на проект"
+      },
+      easterEggs: {
+        undoToast: "Отменять нечего. Тут уже красиво.",
+        commentsResolved: "Комментарии закрыты."
+      }
+    }
+  };
+
+  const languageStorageKey = "siteLanguage";
+  const langButtons = $$(".lang-switcher__btn");
+
+  function getTranslation(lang, key) {
+    return key.split(".").reduce((value, part) => {
+      if (!value || typeof value !== "object") return undefined;
+      return value[part];
+    }, translations[lang]);
+  }
+
+  function updateTranslatedElements(lang) {
+    $$("[data-i18n]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18n);
+      if (typeof value === "string") el.textContent = value;
+    });
+
+    $$("[data-i18n-html]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18nHtml);
+      if (typeof value === "string") el.innerHTML = value;
+    });
+
+    $$("[data-i18n-placeholder]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18nPlaceholder);
+      if (typeof value === "string") el.setAttribute("placeholder", value);
+    });
+
+    $$("[data-i18n-aria-label]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18nAriaLabel);
+      if (typeof value === "string") el.setAttribute("aria-label", value);
+    });
+
+    $$("[data-i18n-title]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18nTitle);
+      if (typeof value === "string") el.setAttribute("title", value);
+    });
+
+    $$("[data-i18n-alt]").forEach((el) => {
+      const value = getTranslation(lang, el.dataset.i18nAlt);
+      if (typeof value === "string") el.setAttribute("alt", value);
+    });
+  }
+
+  function refreshAnimationsAfterLanguageChange() {
+    requestAnimationFrame(() => {
+      if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") {
+        window.ScrollTrigger.refresh();
+      }
+    });
+  }
+
+  function setLanguage(lang, options = {}) {
+    const nextLang = translations[lang] ? lang : "en";
+
+    updateTranslatedElements(nextLang);
+    document.documentElement.setAttribute("lang", nextLang);
+
+    langButtons.forEach((button) => {
+      const isActive = button.dataset.lang === nextLang;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+    });
+
+    if (options.save !== false) {
+      try {
+        localStorage.setItem(languageStorageKey, nextLang);
+      } catch (error) {
+        console.warn("Unable to save language preference.", error);
+      }
+    }
+
+    window.currentSiteLanguage = nextLang;
+    if (typeof window.updateFigmaCursorLanguage === "function") {
+      window.updateFigmaCursorLanguage();
+    }
+    refreshAnimationsAfterLanguageChange();
+  }
+
+  window.setLanguage = setLanguage;
+  window.getSiteTranslation = (key, lang = window.currentSiteLanguage || "en") => getTranslation(lang, key);
+
+  langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  let savedLanguage = "en";
+  try {
+    savedLanguage = localStorage.getItem(languageStorageKey) || "en";
+  } catch (error) {
+    console.warn("Unable to read language preference.", error);
+  }
+  setLanguage(savedLanguage, { save: false });
+
+  const easterRewardKeys = [
+    "macClose",
+    "heroComments",
+    "undo",
+    "grid",
+    "aboutDrag",
+    "projectDrag",
+    "contactDrag"
+  ];
+  const easterProgressKey = "portfolioEasterProgress";
+  const easterRewardShownKey = "portfolioEasterRewardShownThisSession";
+  const easterRewardModal = $("#easter-reward-popup");
+
+  function readEasterProgress() {
+    try {
+      return JSON.parse(localStorage.getItem(easterProgressKey)) || {};
+    } catch (error) {
+      console.warn("Unable to read Easter egg progress.", error);
+      return {};
+    }
+  }
+
+  function saveEasterProgress(progress) {
+    try {
+      localStorage.setItem(easterProgressKey, JSON.stringify(progress));
+    } catch (error) {
+      console.warn("Unable to save Easter egg progress.", error);
+    }
+  }
+
+  function openEasterRewardModal() {
+    if (!easterRewardModal || window.innerWidth <= 1024) return;
+    easterRewardModal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeEasterRewardModal() {
+    if (!easterRewardModal) return;
+    easterRewardModal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  function checkEasterReward(progress = readEasterProgress()) {
+    const isComplete = easterRewardKeys.every((item) => progress[item]);
+    const wasShown = sessionStorage.getItem(easterRewardShownKey) === "true";
+    if (!isComplete || wasShown || window.innerWidth <= 1024) return;
+
+    sessionStorage.setItem(easterRewardShownKey, "true");
+    openEasterRewardModal();
+  }
+
+  function markEasterEgg(key) {
+    if (!easterRewardKeys.includes(key)) return;
+
+    const progress = readEasterProgress();
+    if (!progress[key]) {
+      progress[key] = true;
+      saveEasterProgress(progress);
+    }
+
+    checkEasterReward(progress);
+  }
+
+  window.easterEggTracker = {
+    mark: markEasterEgg,
+    check: checkEasterReward
+  };
+  checkEasterReward();
+
+  if (easterRewardModal) {
+    const rewardOverlay = $(".easter-reward-modal__overlay", easterRewardModal);
+    if (rewardOverlay) rewardOverlay.addEventListener("click", closeEasterRewardModal);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && easterRewardModal.classList.contains("is-open")) {
+        closeEasterRewardModal();
+      }
+    });
+  }
+
+  const undoToast = $("#undo-toast");
+  const layoutGridOverlay = $("#layout-grid-overlay");
+  let undoToastTimer;
+  let layoutGridTimer;
+  const initialLoaderStartedAt = performance.now();
+
+  function revealInitialPage() {
+    const elapsed = performance.now() - initialLoaderStartedAt;
+    const delay = Math.max(0, 4000 - elapsed);
+
+    window.setTimeout(() => {
+      document.body.classList.add("is-ready");
+      document.body.classList.add("is-loaded");
+      document.body.classList.remove("is-loading");
+
+      window.setTimeout(() => {
+        document.body.style.overflow = "";
+
+        animateStroke(".hero-horn__stroke--left", 1200, 200);
+        animateStroke(".hero-horn__stroke--right", 1200, 400);
+        animateStroke(".hero-eye-lines__stroke--1", 500, 700);
+        animateStroke(".hero-eye-lines__stroke--2", 500, 850);
+        animateStroke(".hero-eye-lines__stroke--3", 500, 1000);
+      }, 180);
+    }, delay);
+  }
+
+  function showUndoToast() {
+    if (!undoToast) return;
+    window.easterEggTracker?.mark("undo");
+    window.clearTimeout(undoToastTimer);
+    undoToast.textContent = getTranslation(window.currentSiteLanguage || "en", "easterEggs.undoToast");
+    undoToast.setAttribute("aria-hidden", "false");
+    undoToast.classList.add("is-visible");
+
+    undoToastTimer = window.setTimeout(() => {
+      undoToast.classList.remove("is-visible");
+      undoToast.setAttribute("aria-hidden", "true");
+    }, 1800);
+  }
+
+  window.addEventListener("keydown", (event) => {
+    const isUndoKey = event.key.toLowerCase() === "z" || event.code === "KeyZ";
+    const isUndoShortcut = (event.ctrlKey || event.metaKey) && isUndoKey;
+    if (!isUndoShortcut || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    showUndoToast();
+  });
+
+  function showLayoutGrid() {
+    if (!layoutGridOverlay || window.innerWidth <= 1024) return;
+    window.easterEggTracker?.mark("grid");
+    window.clearTimeout(layoutGridTimer);
+    layoutGridOverlay.classList.add("is-visible");
+
+    layoutGridTimer = window.setTimeout(() => {
+      layoutGridOverlay.classList.remove("is-visible");
+    }, 2000);
+  }
+
+  window.addEventListener("keydown", (event) => {
+    const isGridKey = event.key.toLowerCase() === "g" || event.code === "KeyG";
+    const isPlainGridKey = isGridKey && !event.ctrlKey && !event.metaKey && !event.altKey;
+    if (!isPlainGridKey) return;
+    const target = event.target;
+    if (target && target.closest?.("input, textarea, select, [contenteditable='true']")) return;
+    showLayoutGrid();
+  });
+
+  // РљР»РёРєРё РїРѕ РєРѕРјРјРµРЅС‚Р°СЂРёСЏРј
+  $$(".comment").forEach((comment) => {
+    comment.addEventListener("click", () => {
+      comment.classList.toggle("is-active");
+    });
+  });
+
+  // Start hero stroke animation after the initial loader.
+  window.addEventListener("load", () => {
+    revealInitialPage();
+  });
+
+  // 2D-РїР°СЂР°Р»Р»Р°РєСЃ РіРѕР»РѕРІС‹ Р·Р° РєСѓСЂСЃРѕСЂРѕРј
+  const heroHead = $(".hero-head");
+  if (heroHead) {
+    const heroHeadTooltip = $(".hero-head__tooltip", heroHead);
+    let heroHeadTooltipTimer;
+
+    heroHead.addEventListener("dblclick", () => {
+      if (!heroHeadTooltip) return;
+      window.clearTimeout(heroHeadTooltipTimer);
+      heroHeadTooltip.classList.add("is-visible");
+      heroHeadTooltipTimer = window.setTimeout(() => {
+        heroHeadTooltip.classList.remove("is-visible");
+      }, 1000);
+    });
+
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+
+    const maxMoveX = 80;
+    const maxMoveY = 60;
+    const easing = 0.04;
+
+    window.addEventListener("mousemove", (e) => {
+      if (window.innerWidth <= 1120) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      targetX = x * maxMoveX;
+      targetY = y * maxMoveY;
+    });
+
+    window.addEventListener("mouseleave", () => {
+      targetX = 0; targetY = 0;
+    });
+
+    function renderHeroHead() {
+      if (window.innerWidth > 1120) {
+        currentX += (targetX - currentX) * easing;
+        currentY += (targetY - currentY) * easing;
+        heroHead.style.transform = `translateX(calc(-50% + ${currentX.toFixed(2)}px)) translateY(${currentY.toFixed(2)}px)`;
+      } else {
+        heroHead.style.transform = "translateX(-50%) translateY(0px)";
+      }
+      requestAnimationFrame(renderHeroHead);
+    }
+    renderHeroHead();
+  }
+
+  // ==========================================
+  // 3. РЎР•РљР¦РРЇ ABOUT
+  // ==========================================
+  const about = $(".about-section");
+  const collage = $(".about-collage");
+
+  if (about) {
+    let aboutPlayed = false;
+    let aboutLocked = false;
+    let frozenDotsOffsetY = 0;
+
+    // РЎРєСЂРѕР»Р»-Р°РЅРёРјР°С†РёСЏ РїРѕСЏРІР»РµРЅРёСЏ (РєР°СЃРєР°Рґ)
+    function playAbout() {
+      if (aboutPlayed) return;
+      aboutPlayed = true;
+
+      animateVar(about, "--collage-p",      { delay: 0,   duration: 1200, easing: easeOutExpo });
+      animateVar(about, "--title-p",        { delay: 100, duration: 1200, easing: easeOutQuart });
+      animateVar(about, "--lead-p",         { delay: 180, duration: 1200, easing: easeOutExpo });
+      animateVar(about, "--text-p",         { delay: 260, duration: 1200, easing: easeOutExpo });
+      animateVar(about, "--skills-label-p", { delay: 360, duration: 1000, easing: easeOutExpo });
+      animateVar(about, "--skills-row1-p",  { delay: 440, duration: 1200, easing: easeOutExpo });
+      animateVar(about, "--skills-row2-p",  { delay: 520, duration: 1200, easing: easeOutExpo });
+      animateVar(about, "--clients-p",      { delay: 650, duration: 1200, easing: easeOutExpo });
+    }
+
+    const aboutObserver = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) playAbout(); },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+    aboutObserver.observe(about);
+
+    // РћСЃС‚Р°РЅРѕРІРєР° С‚РѕС‡РµРє С„РѕРЅР°
+    function updateDots() {
+      const rect = about.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const active = rect.top < vh * 0.95 && rect.bottom > vh * 0.10;
+
+      if (active) {
+        if (!aboutLocked) {
+          frozenDotsOffsetY = -(scrollY * 0.12);
+          aboutLocked = true;
+        }
+        document.body.style.setProperty("--dots-offset-y", `${frozenDotsOffsetY.toFixed(2)}px`);
+      } else {
+        aboutLocked = false;
+        document.body.style.setProperty("--dots-offset-y", `${-(scrollY * 0.12).toFixed(2)}px`);
+      }
+      requestAnimationFrame(updateDots);
+    }
+    updateDots();
+
+    // 3D-РїР°СЂР°Р»Р»Р°РєСЃ РєРѕР»Р»Р°Р¶Р°
+    if (collage) {
+      let targetMX = 0, targetMY = 0, currentMX = 0, currentMY = 0;
+      let targetRX = 0, targetRY = 0, currentRX = 0, currentRY = 0;
+
+      window.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+        targetMX = x * 26; targetMY = y * 18;
+        targetRY = x * 3.2; targetRX = -y * 2.6;
+      });
+
+      window.addEventListener("mouseleave", () => {
+        targetMX = 0; targetMY = 0; targetRX = 0; targetRY = 0;
+      });
+
+      function renderCollageParallax() {
+        if (window.innerWidth <= 1024) {
+          collage.style.setProperty("--mx", "0px");
+          collage.style.setProperty("--my", "0px");
+          collage.style.setProperty("--rx", "0deg");
+          collage.style.setProperty("--ry", "0deg");
+        } else {
+          currentMX += (targetMX - currentMX) * 0.05;
+          currentMY += (targetMY - currentMY) * 0.05;
+          currentRX += (targetRX - currentRX) * 0.04;
+          currentRY += (targetRY - currentRY) * 0.04;
+
+          collage.style.setProperty("--mx", `${currentMX.toFixed(2)}px`);
+          collage.style.setProperty("--my", `${currentMY.toFixed(2)}px`);
+          collage.style.setProperty("--rx", `${currentRX.toFixed(2)}deg`);
+          collage.style.setProperty("--ry", `${currentRY.toFixed(2)}deg`);
+        }
+        requestAnimationFrame(renderCollageParallax);
+      }
+      renderCollageParallax();
+    }
+  }
+
+  // ==========================================
+  // 4. РЎР•РљР¦РРЇ PROJECTS
+  // ==========================================
+  const projects = $(".projects-section");
+
+  if (projects) {
+    let projectsPlayed = false;
+
+    function playProjects() {
+      if (projectsPlayed) return;
+      projectsPlayed = true;
+
+      animateVar(projects, "--projects-title-p", { delay: 0,   duration: 1200, easing: easeOutQuart });
+
+      animateVar(projects, "--project-1-p", { delay: 100, duration: 1100, easing: easeOutExpo });
+      animateVar(projects, "--project-2-p", { delay: 180, duration: 1100, easing: easeOutExpo });
+      animateVar(projects, "--project-3-p", { delay: 260, duration: 1100, easing: easeOutExpo });
+      animateVar(projects, "--project-4-p", { delay: 340, duration: 1100, easing: easeOutExpo });
+      animateVar(projects, "--project-5-p", { delay: 420, duration: 1100, easing: easeOutExpo });
+      animateVar(projects, "--project-6-p", { delay: 500, duration: 1100, easing: easeOutExpo });
+    }
+
+    const projectsObserver = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) playProjects(); },
+      { threshold: 0.10, rootMargin: "0px 0px -5% 0px" }
+    );
+    projectsObserver.observe(projects);
+  }
+
+  // ==========================================
+  // 5. РЎР•РљР¦РРЇ CTA (LET'S TALK)
+  // ==========================================
+  const ctaSection = $(".cta");
+  
+  if (ctaSection) {
+    const ctaObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in-view');
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -5% 0px"
+      }
+    );
+    ctaObserver.observe(ctaSection);
+  }
+
+  // ==========================================
+  // 6. РџРћР”Р’РђР› (FOOTER)
+  // ==========================================
+  const footerSection = $(".footer");
+  
+  if (footerSection) {
+    const footerObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in-view');
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px 50px 0px"
+      }
+    );
+    footerObserver.observe(footerSection);
+  }
+
+  // ==========================================
+  // 7. РќРђР’РР“РђР¦РРЇ (SCROLL SPY)
+  // ==========================================
+  const navLinks = $$('.topbar__nav a[href^="#"]'); // РќР°С…РѕРґРёРј РІСЃРµ СЃСЃС‹Р»РєРё СЃ СЏРєРѕСЂСЏРјРё
+  
+  // РЎРѕР±РёСЂР°РµРј СЃРµРєС†РёРё, РЅР° РєРѕС‚РѕСЂС‹Рµ РІРµРґСѓС‚ СЃСЃС‹Р»РєРё
+  const sectionsToTrack = navLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean); // РћС‚СЃРµРёРІР°РµРј null, РµСЃР»Рё СЃРµРєС†РёРё РІРґСЂСѓРі РЅРµС‚
+
+  if (sectionsToTrack.length > 0) {
+    // РќР°СЃС‚СЂР°РёРІР°РµРј РЅР°Р±Р»СЋРґР°С‚РµР»СЊ
+    const scrollSpyOptions = {
+      // РњР°СЂРґР¶РёРЅС‹ РЅР°СЃС‚СЂРѕРµРЅС‹ С‚Р°Рє, С‡С‚РѕР±С‹ СЃРµРєС†РёСЏ СЃС‡РёС‚Р°Р»Р°СЃСЊ "Р°РєС‚РёРІРЅРѕР№", 
+      // РєРѕРіРґР° РѕРЅР° РїРµСЂРµСЃРµРєР°РµС‚ С†РµРЅС‚СЂР°Р»СЊРЅСѓСЋ Р»РёРЅРёСЋ СЌРєСЂР°РЅР° (-50% СЃРІРµСЂС…Сѓ Рё СЃРЅРёР·Сѓ)
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0
+    };
+
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          
+          // РЈРґР°Р»СЏРµРј Р°РєС‚РёРІРЅС‹Р№ РєР»Р°СЃСЃ Сѓ РІСЃРµС… СЃСЃС‹Р»РѕРє
+          navLinks.forEach(link => link.classList.remove('is-active-link'));
+          
+          // Р”РѕР±Р°РІР»СЏРµРј Р°РєС‚РёРІРЅС‹Р№ РєР»Р°СЃСЃ С‚РѕР»СЊРєРѕ РЅСѓР¶РЅРѕР№ СЃСЃС‹Р»РєРµ
+          const activeLink = document.querySelector(`.topbar__nav a[href="#${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('is-active-link');
+          }
+        }
+      });
+    }, scrollSpyOptions);
+
+    // Р’РµС€Р°РµРј РЅР°Р±Р»СЋРґР°С‚РµР»СЊ РЅР° РєР°Р¶РґСѓСЋ СЃРµРєС†РёСЋ
+    sectionsToTrack.forEach(section => scrollSpyObserver.observe(section));
+  }
+
+  
+
+});
+</script>
+
+
+
+<script>
+  // РЎР°РјРѕРІС‹Р·С‹РІР°СЋС‰Р°СЏСЃСЏ С„СѓРЅРєС†РёСЏ РґР»СЏ РёР·РѕР»СЏС†РёРё РѕР±Р»Р°СЃС‚Рё РІРёРґРёРјРѕСЃС‚Рё
+  (function initCustomCursor() {
+    // РџСЂРѕРІРµСЂРєР° РЅР° РјРѕР±РёР»СЊРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° (С‚Р°Рј РєСѓСЂСЃРѕСЂ РЅРµ РЅСѓР¶РµРЅ)
+    if (window.innerWidth <= 1024) return;
+
+    const cursor = document.getElementById('figma-cursor');
+    if (!cursor) {
+      console.warn('РљСѓСЂСЃРѕСЂ РЅРµ РЅР°Р№РґРµРЅ РІ HTML!');
+      return;
+    }
+
+    let isVisible = false;
+
+    // Р“Р»Р°РІРЅР°СЏ С„СѓРЅРєС†РёСЏ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ
+    const moveCursor = (e) => {
+      // РџРѕРєР°Р·С‹РІР°РµРј РєСѓСЂСЃРѕСЂ РїСЂРё РїРµСЂРІРѕРј РґРІРёР¶РµРЅРёРё
+      if (!isVisible) {
+        cursor.classList.add('is-visible');
+        isVisible = true;
+      }
+      
+      // Р”РІРёРіР°РµРј (РёСЃРїРѕР»СЊР·СѓРµРј clientX/Y РґР»СЏ fixed РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ)
+      cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+    };
+
+    // РЎР»СѓС€Р°С‚РµР»Рё СЃРѕР±С‹С‚РёР№
+    window.addEventListener('mousemove', moveCursor);
+
+    // РџСЂСЏС‡РµРј, РєРѕРіРґР° РјС‹С€СЊ СѓС…РѕРґРёС‚ Р·Р° РїСЂРµРґРµР»С‹ РІРєР»Р°РґРєРё
+    document.addEventListener('mouseleave', () => {
+      cursor.classList.remove('is-visible');
+      isVisible = false;
+    });
+
+    // РЎРЅРѕРІР° РїРѕРєР°Р·С‹РІР°РµРј РїСЂРё РІРѕР·РІСЂР°С‰РµРЅРёРё
+    document.addEventListener('mouseenter', (e) => {
+      if (e.clientX > 0 && e.clientY > 0) {
+        cursor.classList.add('is-visible');
+        isVisible = true;
+      }
+    });
+  })();
+</script>
+
+<script>
+  (function() {
+    // Element ids used by the share modal.
+    const shareBtnId = 'share-trigger';
+    const modalId = 'share-modal';
+    const closeBtnId = 'share-close';
+    const overlayId = 'share-overlay';
+
+    function initShare() {
+      const btn = document.getElementById(shareBtnId);
+      const modal = document.getElementById(modalId);
+      const close = document.getElementById(closeBtnId);
+      const overlay = document.getElementById(overlayId);
+
+      // Stop silently if the share UI is not present.
+      if (!btn || !modal) return;
+
+      // Open the modal.
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close the modal.
+      const closeShare = () => {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      };
+
+      // Close on the explicit close control and backdrop.
+      if (close) close.addEventListener('click', closeShare);
+      if (overlay) overlay.addEventListener('click', closeShare);
+
+      // Close with Escape.
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeShare();
+        }
+      });
+
+      // Copy the current page link.
+      const copyBtn = modal.querySelector('.share-modal__copy-link');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          const currentUrl = window.location.href;
+          
+          navigator.clipboard.writeText(currentUrl).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            const copiedText = window.getSiteTranslation?.("share.linkCopied") || "Link copied!";
+            copyBtn.innerHTML = '<span style="color: #007BE5;"></span>';
+            copyBtn.querySelector("span").textContent = copiedText;
+            
+            setTimeout(() => {
+              copyBtn.innerHTML = originalHTML;
+            }, 2000);
+          }).catch(err => {
+            console.error('Copy failed: ', err);
+          });
+        });
+      }
+    }
+
+    // Run when the DOM is ready.
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initShare);
+    } else {
+      initShare();
+    }
+  })();
+</script>
+
+
+<script>
+  (function() {
+    // 1. РС‰РµРј РЅР°С€Рё С‚РѕС‡РєРё РІ С€Р°РїРєРµ РїРѕ С‚РІРѕРёРј РєР»Р°СЃСЃР°Рј
+    const dots = document.querySelectorAll('.traffic-lights__dot');
+    const modal = document.getElementById('easter-modal');
+    const overlay = document.getElementById('easter-overlay');
+    const connectBtn = document.getElementById('easter-connect');
+
+    if (!modal || dots.length === 0) return;
+
+    // 2. Р¤СѓРЅРєС†РёРё СѓРїСЂР°РІР»РµРЅРёСЏ
+    const openEaster = () => {
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeEaster = () => {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    // 3. Р’РµС€Р°РµРј РєР»РёРє РЅР° РєР°Р¶РґСѓСЋ С‚РѕС‡РєСѓ
+    dots.forEach(dot => {
+      // Р§С‚РѕР±С‹ РЅР°С€Р° РєР°СЃС‚РѕРјРЅР°СЏ РјС‹С€РєР° Р·РЅР°Р»Р°, С‡С‚Рѕ СЃСЋРґР° РјРѕР¶РЅРѕ С‚С‹РєР°С‚СЊ
+      dot.style.pointerEvents = 'auto'; 
+      dot.addEventListener('click', () => {
+        window.easterEggTracker?.mark('macClose');
+        if (document.getElementById('easter-reward-popup')?.classList.contains('is-open')) return;
+        openEaster();
+      });
+    });
+
+    // 4. Р—Р°РєСЂС‹С‚РёРµ
+    overlay.addEventListener('click', closeEaster);
+    connectBtn.addEventListener('click', closeEaster);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeEaster();
+    });
+  })();
+</script>
+
+
+
+<div class="author-cursor" id="author-cursor">
+  <img src="images/Cursors/blue.svg" class="author-cursor__img" alt="">
+  
+  <div class="author-cursor__text-wrapper">
+    <div class="author-label author-label--name">Dmitrii Mikhailov</div>
+    <div class="author-label author-label--chat" id="author-chat"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const draggableElements = document.querySelectorAll('.about-skills__row, .talk-svg, .cta__decor');
+  const authorCursor = document.getElementById('author-cursor');
+  const authorChat = document.getElementById('author-chat');
+  
+  let pendingElements = []; 
+  let isAuthorBusy = false; 
+  let currentMessageIndex = 0;
+
+  const authorMessagesByLanguage = {
+    en: [
+      "No, no, no. Let's put this back where it belongs.",
+      "I've told you before, please don't break my layout!",
+      "You're quite persistent, aren't you? Let's fix this.",
+      "Whoops! That's not where that goes. Returning...",
+      "Nice try, but I prefer it the way it was.",
+      "Are you testing my patience or the code? Putting it back.",
+      "Let's keep things organized, shall we?",
+      "I spent a lot of time on this alignment. Let's return it."
+    ],
+    ru: [
+      "Нет, нет, нет. Давайте вернем это на место.",
+      "Я же просил не ломать мой layout!",
+      "Настойчиво. Ладно, сейчас поправим.",
+      "Упс, это явно не туда. Возвращаю...",
+      "Хорошая попытка, но мне больше нравится как было.",
+      "Вы проверяете мое терпение или код? Возвращаю.",
+      "Давайте держать все в порядке, хорошо?",
+      "Я долго выравнивал это место. Вернем обратно."
+    ]
+  };
+
+  const authorBatchMessages = {
+    en: "Okay, now you're just making a mess. Let me fix these things.",
+    ru: "Так, теперь это уже беспорядок. Дайте я все поправлю."
+  };
+
+  const projectDragMessages = {
+    en: "Careful, that one took a few weeks.",
+    ru: "Осторожнее, на это ушло несколько недель."
+  };
+
+  const getAuthorLanguage = () => window.currentSiteLanguage === "ru" ? "ru" : "en";
+
+  async function typeAuthorMessage(message, anchorEl) {
+    if (isAuthorBusy || !authorCursor || !authorChat || !anchorEl) return;
+
+    isAuthorBusy = true;
+    const center = getCenterCoords(anchorEl);
+    authorCursor.style.position = 'absolute';
+    authorCursor.style.transition = 'all 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+    authorCursor.style.left = (center.x + 18) + 'px';
+    authorCursor.style.top = (center.y - 18) + 'px';
+    authorCursor.style.opacity = "1";
+    authorCursor.classList.add('is-active');
+    authorCursor.classList.add('is-typing');
+    authorChat.textContent = "";
+
+    await sleep(260);
+    for (let char of message) {
+      authorChat.textContent += char;
+      await sleep(24);
+    }
+
+    await sleep(950);
+    authorCursor.classList.remove('is-typing');
+    authorCursor.style.transition = 'all 0.45s cubic-bezier(0.55, 0, 1, 0.45)';
+    authorCursor.style.opacity = "0";
+    await sleep(450);
+    authorCursor.classList.remove('is-active');
+    isAuthorBusy = false;
+  }
+
+  draggableElements.forEach(el => {
+    el._dragState = { 
+      currentX: 0, 
+      currentY: 0, 
+      startX: 0, 
+      startY: 0, 
+      isDragging: false,
+      isLocked: false 
+    };
+
+    el.addEventListener('mousedown', (e) => {
+      const s = el._dragState;
+      if (s.isLocked) return;
+      e.preventDefault();
+      s.isDragging = true;
+      s.startX = e.clientX - s.currentX;
+      s.startY = e.clientY - s.currentY;
+      el.style.zIndex = '950'; 
+      el.style.transition = 'none';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      const s = el._dragState;
+      if (!s.isDragging) return;
+      s.currentX = e.clientX - s.startX;
+      s.currentY = e.clientY - s.startY;
+      el.style.transform = `translate(${s.currentX}px, ${s.currentY}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      const s = el._dragState;
+      if (!s.isDragging) return;
+      s.isDragging = false;
+
+      if (Math.abs(s.currentX) > 20 || Math.abs(s.currentY) > 20) {
+        s.isLocked = true;
+        if (el.classList.contains('about-skills__row')) {
+          window.easterEggTracker?.mark('aboutDrag');
+        }
+        if (el.classList.contains('talk-svg') || el.classList.contains('cta__decor')) {
+          window.easterEggTracker?.mark('contactDrag');
+        }
+        if (!pendingElements.includes(el)) {
+          pendingElements.push(el);
+        }
+        processQueue();
+      } else {
+        el.style.zIndex = '10';
+      }
+    });
+  });
+
+  document.querySelectorAll('.project-card').forEach((card) => {
+    const link = card.querySelector('.project-card__link');
+    if (!link) return;
+
+    link.setAttribute('draggable', 'false');
+    link.querySelectorAll('img').forEach((img) => {
+      img.setAttribute('draggable', 'false');
+    });
+
+    let startX = 0;
+    let startY = 0;
+    let isPointerDown = false;
+    let didSoftDrag = false;
+
+    card.addEventListener('mousedown', (event) => {
+      if (event.button !== 0 || window.innerWidth <= 1024) return;
+      isPointerDown = true;
+      didSoftDrag = false;
+      startX = event.clientX;
+      startY = event.clientY;
+      card.classList.remove('is-soft-returning');
+    });
+
+    window.addEventListener('mousemove', (event) => {
+      if (!isPointerDown) return;
+
+      const deltaX = event.clientX - startX;
+      const deltaY = event.clientY - startY;
+      const distance = Math.hypot(deltaX, deltaY);
+      if (distance < 10 && !didSoftDrag) return;
+
+      didSoftDrag = true;
+      card.classList.add('is-soft-dragging');
+
+      const moveX = Math.max(-18, Math.min(18, deltaX * 0.18));
+      const moveY = Math.max(-14, Math.min(14, deltaY * 0.18));
+      const rotate = Math.max(-1.4, Math.min(1.4, deltaX * 0.025));
+      link.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) rotate(${rotate}deg)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isPointerDown) return;
+      isPointerDown = false;
+
+      if (!didSoftDrag) return;
+
+      card.dataset.softDragged = 'true';
+      card.classList.remove('is-soft-dragging');
+      card.classList.add('is-soft-returning');
+      link.style.transform = 'translate3d(0, 0, 0) rotate(0deg)';
+      window.easterEggTracker?.mark('projectDrag');
+
+      window.setTimeout(() => {
+        card.classList.remove('is-soft-returning');
+        link.style.transform = '';
+        delete card.dataset.softDragged;
+      }, 540);
+
+      typeAuthorMessage(projectDragMessages[getAuthorLanguage()], card);
+    });
+
+    link.addEventListener('click', (event) => {
+      if (!card.dataset.softDragged) return;
+      event.preventDefault();
+      event.stopPropagation();
+    });
+  });
+
+  // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡РµС‚Р° С†РµРЅС‚СЂР° СЌР»РµРјРµРЅС‚Р° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґРѕРєСѓРјРµРЅС‚Р°
+  function getCenterCoords(el) {
+    const box = el.getBoundingClientRect();
+    return {
+      x: box.left + window.pageXOffset + (box.width / 2),
+      y: box.top + window.pageYOffset + (box.height / 2)
+    };
+  }
+
+  async function processQueue() {
+    if (isAuthorBusy || pendingElements.length === 0) return;
+    isAuthorBusy = true;
+    authorCursor.style.position = 'absolute';
+
+    while (pendingElements.length > 0) {
+      const targetEl = pendingElements[0];
+      const isFirstInSession = !authorCursor.classList.contains('is-active');
+      
+      // РЎС‡РёС‚Р°РµРј С†РµРЅС‚СЂ
+      const center = getCenterCoords(targetEl);
+
+      // РЎРјРµС‰РµРЅРёРµ СЃР°РјРѕРіРѕ РѕСЃС‚СЂРёСЏ РєСѓСЂСЃРѕСЂР° (РїРѕРґР±РµСЂРё РїРѕРґ СЃРІРѕСЋ РёРєРѕРЅРєСѓ, РµСЃР»Рё РЅСѓР¶РЅРѕ)
+      const cursorOffset = { x: 5, y: 5 }; 
+
+      // 1. РџРћР”Р›Р•Рў Рљ Р¦Р•РќРўР РЈ
+      authorCursor.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      authorCursor.style.left = (center.x - cursorOffset.x) + 'px';
+      authorCursor.style.top = (center.y - cursorOffset.y) + 'px';
+      
+      if (isFirstInSession) {
+        authorCursor.classList.add('is-active');
+        authorCursor.classList.remove('is-typing');
+        await sleep(600);
+
+        authorCursor.classList.add('is-typing');
+        authorChat.textContent = "";
+        
+        const authorLanguage = getAuthorLanguage();
+        const authorMessages = authorMessagesByLanguage[authorLanguage];
+        let message = (pendingElements.length > 1) 
+          ? authorBatchMessages[authorLanguage] 
+          : authorMessages[currentMessageIndex];
+        
+        if (pendingElements.length === 1) {
+          currentMessageIndex = (currentMessageIndex + 1) % authorMessages.length;
+        }
+          
+        for (let char of message) {
+          authorChat.textContent += char;
+          await sleep(30);
+        }
+        await sleep(800); 
+        authorCursor.classList.remove('is-typing');
+        await sleep(300);
+      } else {
+        await sleep(400);
+      }
+
+      // 2. Р’РћР—Р’Р РђРў (РўСЏРЅРµРј Р·Р° С†РµРЅС‚СЂ)
+      const duration = 1100;
+      const figmaCurve = 'cubic-bezier(0.16, 1, 0.3, 1)';
+      const s = targetEl._dragState;
+      
+      // Р’С‹С‡РёСЃР»СЏРµРј С‚РѕС‡РєСѓ СЃС‚Р°СЂС‚Р° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ "РґРѕРјР°"
+      const homeCenterX = center.x - s.currentX;
+      const homeCenterY = center.y - s.currentY;
+
+      targetEl.style.zIndex = '950'; 
+      targetEl.style.transition = `transform ${duration}ms ${figmaCurve}`;
+      authorCursor.style.transition = `all ${duration}ms ${figmaCurve}`;
+      
+      targetEl.style.transform = `translate(0px, 0px)`;
+      
+      // РљСѓСЂСЃРѕСЂ Р»РµС‚РёС‚ РІ "РґРѕРјР°С€РЅРёР№" С†РµРЅС‚СЂ
+      authorCursor.style.left = (homeCenterX - cursorOffset.x) + 'px';
+      authorCursor.style.top = (homeCenterY - cursorOffset.y) + 'px';
+
+      await sleep(duration);
+
+      targetEl.style.zIndex = '10';
+      targetEl.style.transition = '';
+      s.currentX = 0; s.currentY = 0;
+      s.isLocked = false; 
+
+      pendingElements.shift();
+
+      if (pendingElements.length === 0) {
+        await sleep(300);
+        authorCursor.style.transition = 'all 0.7s cubic-bezier(0.55, 0, 1, 0.45)';
+        authorCursor.style.left = "-500px"; 
+        authorCursor.style.opacity = "0";
+        await sleep(700);
+        authorCursor.classList.remove('is-active');
+      }
+    }
+
+    isAuthorBusy = false;
+  }
+
+  function sleep(ms) { return new Promise(res => setTimeout(res, ms)); }
+})();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // РќР°С…РѕРґРёРј РєРЅРѕРїРєСѓ РёРјРµРЅРЅРѕ РїРѕ С‚РІРѕРµРјСѓ РєР»Р°СЃСЃСѓ .topbar__plus
+  const plusBtn = document.querySelector('.topbar__plus');
+  const projectModal = document.getElementById('project-popup');
+
+  if (plusBtn && projectModal) {
+    const projectOverlay = projectModal.querySelector('.project-modal__overlay');
+
+    // Р¤СѓРЅРєС†РёСЏ РѕС‚РєСЂС‹С‚РёСЏ
+    const openModal = (e) => {
+      e.preventDefault();
+      console.log('Plus clicked!'); // Р”Р»СЏ С‚РµСЃС‚Р° РІ РєРѕРЅСЃРѕР»Рё
+      projectModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    // Р¤СѓРЅРєС†РёСЏ Р·Р°РєСЂС‹С‚РёСЏ
+    const closeModal = () => {
+      projectModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    // Р’РµС€Р°РµРј СЃРѕР±С‹С‚РёРµ
+    plusBtn.addEventListener('click', openModal);
+
+    // Р—Р°РєСЂС‹С‚РёРµ РїРѕ РєР»РёРєСѓ РЅР° С„РѕРЅ
+    if (projectOverlay) {
+      projectOverlay.addEventListener('click', closeModal);
+    }
+
+    // Р—Р°РєСЂС‹С‚РёРµ РїРѕ Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  } else {
+    console.error('РљРЅРѕРїРєР° РёР»Рё РџРѕРїР°Рї РЅРµ РЅР°Р№РґРµРЅС‹. РџСЂРѕРІРµСЂСЊ ID Рё РљР»Р°СЃСЃС‹!');
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const comments = document.querySelectorAll('.hero-comments__desktop .comment');
+  const commentBtn = document.querySelector('.hero-social__comment');
+  const dot = document.querySelector('.hero-social__comment-dot');
+  const resolvedTooltip = document.querySelector('.hero-social__resolved-tooltip');
+  const heroSection = document.getElementById('home');
+  let commentsResolvedShown = false;
+  let resolvedTooltipTimer;
+
+  function showCommentsResolved() {
+    if (commentsResolvedShown) return;
+    commentsResolvedShown = true;
+    window.easterEggTracker?.mark('heroComments');
+
+    if (dot) {
+      dot.classList.add('is-hidden');
+    }
+
+    if (resolvedTooltip) {
+      window.clearTimeout(resolvedTooltipTimer);
+      const text = window.getSiteTranslation?.('easterEggs.commentsResolved') || 'Comments resolved.';
+      resolvedTooltip.textContent = text;
+      resolvedTooltip.classList.add('is-visible');
+
+      resolvedTooltipTimer = window.setTimeout(() => {
+        resolvedTooltip.classList.remove('is-visible');
+      }, 1400);
+    }
+  }
+
+  // Р¤СѓРЅРєС†РёСЏ, РєРѕС‚РѕСЂР°СЏ РїСЂРѕРІРµСЂСЏРµС‚, РІСЃРµ Р»Рё РїСЂРѕС‡РёС‚Р°РЅРѕ
+  function checkComments() {
+    const activeCount = document.querySelectorAll('.hero-comments__desktop .comment.is-active').length;
+    
+    if (activeCount >= comments.length) {
+      showCommentsResolved();
+      return true; // Р’СЃРµ РїСЂРѕС‡РёС‚Р°РЅРѕ
+    }
+    return false; // Р•СЃС‚СЊ РЅРµРїСЂРѕС‡РёС‚Р°РЅРЅС‹Рµ
+  }
+
+  // 1. РљР»РёРє РїРѕ СЃР°РјРёРј РєРѕРјРјРµРЅС‚Р°СЂРёСЏРј
+  comments.forEach(comment => {
+    comment.addEventListener('click', () => {
+      comment.classList.add('is-active');
+      checkComments();
+    });
+  });
+
+  // 2. РљР»РёРє РїРѕ РєРЅРѕРїРєРµ РІ РЅРёР¶РЅРµР№ РїР°РЅРµР»Рё
+  if (commentBtn) {
+    commentBtn.addEventListener('click', (e) => {
+      const allRead = checkComments();
+
+      // Р•СЃР»Рё РќР• РІСЃРµ РїСЂРѕС‡РёС‚Р°РЅРѕ вЂ” СЃРєСЂРѕР»Р»РёРј РІРІРµСЂС…
+      if (!allRead) {
+        e.preventDefault();
+        if (heroSection) {
+          heroSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      } else {
+        // Р•СЃР»Рё РІСЃРµ РїСЂРѕС‡РёС‚Р°РЅРѕ, РєРЅРѕРїРєР° СЂР°Р±РѕС‚Р°РµС‚ РєР°Рє РѕР±С‹С‡РЅР°СЏ СЃСЃС‹Р»РєР° (РµСЃР»Рё Сѓ РЅРµРµ РµСЃС‚СЊ href)
+        console.log('Done: All comments are white');
+      }
+    });
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Р”РѕР±Р°РІР»СЏРµРј .cta__btn РІ СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№
+  const contactTriggers = document.querySelectorAll('.contact-btn, #easter-connect, .cta__btn, .js-open-contact');
+  const contactPopup = document.getElementById('contact-popup');
+  const easterModal = document.querySelector('.easter-modal');
+
+  if (contactPopup) {
+    const overlay = contactPopup.querySelector('.project-modal__overlay');
+
+    const openPopup = (e) => {
+      e.preventDefault();
+      
+      // Р•СЃР»Рё РѕС‚РєСЂС‹РІР°РµРј РёР· РґСЂСѓРіРѕР№ РјРѕРґР°Р»РєРё (РїР°СЃС…Р°Р»РєРё), Р·Р°РєСЂС‹РІР°РµРј РµС‘
+      if (e.currentTarget.id === 'easter-connect' && easterModal) {
+        easterModal.classList.remove('is-open');
+      }
+
+      contactPopup.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closePopup = () => {
+      contactPopup.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    // РџСЂРёРІСЏР·С‹РІР°РµРј СЃРѕР±С‹С‚РёРµ РєРѕ РІСЃРµРј РєРЅРѕРїРєР°Рј СЃСЂР°Р·Сѓ
+    contactTriggers.forEach(trigger => {
+      trigger.addEventListener('click', openPopup);
+    });
+
+    if (overlay) {
+      overlay.addEventListener('click', closePopup);
+    }
+
+    // Р—Р°РєСЂС‹С‚РёРµ РЅР° Esc РґР»СЏ СѓРґРѕР±СЃС‚РІР°
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && contactPopup.classList.contains('is-open')) {
+        closePopup();
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
+
+
