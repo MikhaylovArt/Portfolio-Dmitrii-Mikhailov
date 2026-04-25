@@ -26,9 +26,12 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dmitriimikhailov.netlify.app/" />
-  <meta property="og:image" content="https://dmitriimikhailov.netlify.app/images/og-cover.jpg" />
+  <meta property="og:image" content="https://dmitriimikhailov.netlify.app/images/og-cover.jpg?v=20260425" />
+  <meta property="og:image:secure_url" content="https://dmitriimikhailov.netlify.app/images/og-cover.jpg?v=20260425" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dmitrii Mikhailov portfolio preview" />
   <meta property="og:site_name" content="Dmitrii Mikhailov Portfolio" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="ru_RU" />
@@ -39,7 +42,8 @@
     name="twitter:description"
     content="Portfolio of Dmitrii Mikhailov, Senior UI/UX Designer creating premium websites, mobile apps, landing pages, digital products, UI animation and scalable visual systems."
   />
-  <meta name="twitter:image" content="https://dmitriimikhailov.netlify.app/images/og-cover.jpg" />
+  <meta name="twitter:image" content="https://dmitriimikhailov.netlify.app/images/og-cover.jpg?v=20260425" />
+  <meta name="twitter:image:alt" content="Dmitrii Mikhailov portfolio preview" />
 
   <script type="application/ld+json">
   {
@@ -1246,25 +1250,23 @@ document.addEventListener("DOMContentLoaded", () => {
     "projectDrag",
     "contactDrag"
   ];
-  const easterProgressKey = "portfolioEasterProgress";
-  const easterRewardShownKey = "portfolioEasterRewardShownThisSession";
   const easterRewardModal = $("#easter-reward-popup");
+  const easterProgress = {};
+  let easterRewardShown = false;
+
+  try {
+    localStorage.removeItem("portfolioEasterProgress");
+    sessionStorage.removeItem("portfolioEasterRewardShownThisSession");
+  } catch (error) {
+    console.warn("Unable to clear stored Easter egg progress.", error);
+  }
 
   function readEasterProgress() {
-    try {
-      return JSON.parse(localStorage.getItem(easterProgressKey)) || {};
-    } catch (error) {
-      console.warn("Unable to read Easter egg progress.", error);
-      return {};
-    }
+    return easterProgress;
   }
 
   function saveEasterProgress(progress) {
-    try {
-      localStorage.setItem(easterProgressKey, JSON.stringify(progress));
-    } catch (error) {
-      console.warn("Unable to save Easter egg progress.", error);
-    }
+    Object.assign(easterProgress, progress);
   }
 
   function openEasterRewardModal() {
@@ -1281,10 +1283,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function checkEasterReward(progress = readEasterProgress()) {
     const isComplete = easterRewardKeys.every((item) => progress[item]);
-    const wasShown = sessionStorage.getItem(easterRewardShownKey) === "true";
-    if (!isComplete || wasShown || window.innerWidth <= 1024) return;
+    if (!isComplete || easterRewardShown || window.innerWidth <= 1024) return;
 
-    sessionStorage.setItem(easterRewardShownKey, "true");
+    easterRewardShown = true;
     openEasterRewardModal();
   }
 
