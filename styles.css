@@ -130,7 +130,10 @@ body::before {
   border-radius: inherit;
   background: #2196f3;
   transform: translateX(-100%);
-  animation: initial-loader-progress 3.25s var(--ease-premium) 0.72s forwards;
+}
+
+body.is-loader-running .initial-loader__progress {
+  animation: initial-loader-progress 2.2s var(--ease-premium) forwards;
 }
 
 body.is-ready .initial-loader {
@@ -143,9 +146,7 @@ body.is-ready .initial-loader {
 
 body.is-loading .topbar,
 body.is-loading .share-widget,
-body.is-loading .hero-title,
 body.is-loading .hero-comments,
-body.is-loading .hero-head,
 body.is-loading .contact-btn,
 body.is-loading .hero-social {
   opacity: 0;
@@ -153,9 +154,7 @@ body.is-loading .hero-social {
 
 body.is-loaded .topbar,
 body.is-loaded .share-widget,
-body.is-loaded .hero-title,
 body.is-loaded .hero-comments,
-body.is-loaded .hero-head,
 body.is-loaded .contact-btn,
 body.is-loaded .hero-social {
   animation: initial-ui-fade-in 0.9s var(--ease-premium) both;
@@ -163,11 +162,9 @@ body.is-loaded .hero-social {
 
 body.is-loaded .topbar { animation-delay: 0.05s; }
 body.is-loaded .share-widget { animation-delay: 0.12s; }
-body.is-loaded .hero-title { animation-delay: 0.18s; }
-body.is-loaded .hero-head { animation-delay: 0.28s; }
-body.is-loaded .hero-comments { animation-delay: 0.38s; }
-body.is-loaded .contact-btn { animation-delay: 0.46s; }
-body.is-loaded .hero-social { animation-delay: 0.54s; }
+body.is-loaded .hero-comments { animation-delay: 0.18s; }
+body.is-loaded .contact-btn { animation-delay: 0.26s; }
+body.is-loaded .hero-social { animation-delay: 0.34s; }
 
 a {
   text-decoration: none;

@@ -79,6 +79,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="images/head.png" as="image" fetchpriority="high" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -221,7 +222,14 @@
 </div>
 
     <div class="hero-head">
-      <img src="images/head.png" alt="" class="hero-head__img" />
+      <img
+        src="images/head.png"
+        alt="Portrait illustration of Dmitrii Mikhailov"
+        class="hero-head__img"
+        width="500"
+        height="715"
+        fetchpriority="high"
+      />
       <div class="hero-head__tooltip" aria-hidden="true">Layer renamed.</div>
 
       <svg class="hero-horn hero-horn--left" viewBox="0 0 137 189" aria-hidden="true">
@@ -257,7 +265,7 @@
         <div class="about-section__top">
           <div class="about-collage">
             <div class="about-card about-card--back">
-              <img src="images/photo-1.jpg" class="about-card__photo" alt="" />
+              <img src="images/photo-1.jpg" class="about-card__photo" alt="" loading="lazy" decoding="async" />
               <img
                 src="images/about-decor-1.png"
                 class="about-card__decor about-card__decor--top-left"
@@ -266,7 +274,7 @@
             </div>
 
             <div class="about-card about-card--front">
-              <img src="images/photo-2.jpg" class="about-card__photo" alt="" />
+              <img src="images/photo-2.jpg" class="about-card__photo" alt="" loading="lazy" decoding="async" />
               <img
                 src="images/about-decor-2.png"
                 class="about-card__decor about-card__decor--top-right"
@@ -562,7 +570,7 @@
 
 <section class="cta" id="contact">
   <div class="cta__decor cta__decor--left">
-    <img src="images/contact-tool-left.png" alt="" />
+    <img src="images/contact-tool-left.png" alt="" loading="lazy" decoding="async" />
   </div>
 
   <div class="cta__card">
@@ -584,7 +592,7 @@
   </div>
 
   <div class="cta__decor cta__decor--right">
-    <img src="images/contact-tool-right.png" alt="" />
+    <img src="images/contact-tool-right.png" alt="" loading="lazy" decoding="async" />
   </div>
 </section>
 
@@ -664,7 +672,7 @@
       
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/avatar.png" alt="" class="share-modal__avatar">
+          <img src="images/avatar.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Dmitrii Mikhailov</span>
         </div>
         <span class="share-modal__role" data-i18n="share.owner">Owner</span>
@@ -672,7 +680,7 @@
 
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/Elon.png" alt="" class="share-modal__avatar">
+          <img src="images/Elon.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Elon Musk</span>
         </div>
         <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
@@ -680,7 +688,7 @@
 
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/Mark.png" alt="" class="share-modal__avatar">
+          <img src="images/Mark.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Mark Zuckerberg</span>
         </div>
         <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
@@ -688,7 +696,7 @@
 
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/Bill.png" alt="" class="share-modal__avatar">
+          <img src="images/Bill.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Bill Gates</span>
         </div>
         <div class="share-modal__dropdown" data-i18n="share.canEdit">Can edit</div>
@@ -696,7 +704,7 @@
 
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/Tim.png" alt="" class="share-modal__avatar">
+          <img src="images/Tim.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Tim Cook</span>
         </div>
         <div class="share-modal__dropdown" data-i18n="share.canView">Can view</div>
@@ -704,7 +712,7 @@
 
       <div class="share-modal__user">
         <div class="share-modal__user-info">
-          <img src="images/Sam.png" alt="" class="share-modal__avatar">
+          <img src="images/Sam.png" alt="" class="share-modal__avatar" loading="lazy" decoding="async">
           <span class="share-modal__name">Sam Altman</span>
         </div>
         <div class="share-modal__dropdown" data-i18n="share.canEdit">Can edit</div>
@@ -720,7 +728,7 @@
   <div class="easter-modal__content">
     
     <div class="easter-modal__image-container">
-      <img src="images/curious-cat.png" alt="Curious Cat" class="easter-modal__image" data-i18n-alt="easter.imageAlt">
+      <img src="images/curious-cat.png" alt="Curious Cat" class="easter-modal__image" data-i18n-alt="easter.imageAlt" loading="lazy" decoding="async">
       <div class="ios-spinner">
         <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
       </div>
@@ -740,7 +748,7 @@
   <div class="project-modal__overlay"></div>
   <div class="project-modal__content">
     <div class="project-modal__image-container">
-      <img src="images/popup-header.png" alt="New Project" class="project-modal__image" data-i18n-alt="projectModal.imageAlt">
+      <img src="images/popup-header.png" alt="New Project" class="project-modal__image" data-i18n-alt="projectModal.imageAlt" loading="lazy" decoding="async">
     </div>
     <div class="project-modal__title" data-i18n="projectModal.title">New project?</div>
     <div class="project-modal__text" data-i18n-html="projectModal.text">
@@ -755,7 +763,7 @@
   <div class="project-modal__overlay"></div>
   <div class="project-modal__content">
     <div class="project-modal__image-container">
-      <img src="images/contact-header.png" alt="Contact me" class="project-modal__image" data-i18n-alt="contactModal.imageAlt">
+      <img src="images/contact-header.png" alt="Contact me" class="project-modal__image" data-i18n-alt="contactModal.imageAlt" loading="lazy" decoding="async">
     </div>
     
     <div class="project-modal__title" data-i18n="contactModal.title">Let's build something great</div>
@@ -772,7 +780,7 @@
   <div class="easter-reward-modal__overlay"></div>
   <div class="easter-reward-modal__content">
     <div class="easter-reward-modal__image-container">
-      <img src="images/cup.png" alt="Trophy" class="easter-reward-modal__image" data-i18n-alt="reward.imageAlt">
+      <img src="images/cup.png" alt="Trophy" class="easter-reward-modal__image" data-i18n-alt="reward.imageAlt" loading="lazy" decoding="async">
     </div>
 
     <div class="easter-reward-modal__title" data-i18n="reward.title">
@@ -1323,10 +1331,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let undoToastTimer;
   let layoutGridTimer;
   const initialLoaderStartedAt = performance.now();
+  let initialPageRevealed = false;
 
   function revealInitialPage() {
+    if (initialPageRevealed) return;
+    initialPageRevealed = true;
+    document.body.classList.add("is-loader-running");
+
     const elapsed = performance.now() - initialLoaderStartedAt;
-    const delay = Math.max(0, 4000 - elapsed);
+    const delay = Math.max(0, 2500 - elapsed);
 
     window.setTimeout(() => {
       document.body.classList.add("is-ready");
@@ -1411,8 +1424,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", revealSocialOnScroll, { passive: true });
 
     const revealItems = [
-      ".hero-title",
-      ".hero-head",
       ".hero-comments__mobile",
       ".about-section__top",
       ".about-clients",
@@ -1455,10 +1466,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Start hero stroke animation after the initial loader.
-  window.addEventListener("load", () => {
-    revealInitialPage();
-  });
+  // Keep the initial loader decorative and fail-safe.
+  revealInitialPage();
+  window.setTimeout(revealInitialPage, 3000);
 
   // 2D-РїР°СЂР°Р»Р»Р°РєСЃ РіРѕР»РѕРІС‹ Р·Р° РєСѓСЂСЃРѕСЂРѕРј
   const heroHead = $(".hero-head");
