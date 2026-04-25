@@ -3460,6 +3460,16 @@ body {
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  @media (min-width: 992px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse) {
+    /* Header */
+    .topbar {
+      top: env(safe-area-inset-top, 0px) !important;
+      transform: translateY(calc(env(safe-area-inset-top, 0px) * -1)) !important;
+    }
+  }
+}
+
 /* ================================
    TABLET - max-width: 991px
    ================================ */
