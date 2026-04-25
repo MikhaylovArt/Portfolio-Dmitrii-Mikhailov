@@ -3269,7 +3269,7 @@ body {
    TABLET HEADER / PROJECT SPACING
    ================================ */
 
-@media (min-width: 768px) and (max-width: 1180px) {
+@media (min-width: 768px) and (max-width: 1366px) and (pointer: coarse) {
   /* Header */
   .topbar {
     position: fixed;
@@ -3376,6 +3376,87 @@ body {
   /* Projects */
   .projects-section {
     padding-top: 136px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse) {
+  /* Header */
+  .topbar {
+    position: fixed;
+    top: 0 !important;
+    inset-block-start: 0 !important;
+    left: 0;
+    right: 0;
+    margin-top: 0 !important;
+    transform: none !important;
+    z-index: 100000;
+    height: 64px;
+    background: #FDFDFD;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+    box-shadow: 0 1px 0 rgba(26, 26, 26, 0.08);
+  }
+
+  .topbar__cell {
+    height: 64px;
+  }
+
+  .topbar__home {
+    width: 96px;
+  }
+
+  .topbar__link {
+    min-width: 118px;
+    padding: 0 24px;
+  }
+
+  .topbar__right {
+    padding: 0 18px;
+  }
+
+  /* About */
+  .about-section {
+    margin-bottom: 160px;
+  }
+
+  .about-clients {
+    margin-top: 56px;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding-top: 180px;
+  }
+
+  .projects-section__inner {
+    width: min(1120px, calc(100vw - 64px));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .project-card,
+  .project-card__link {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+
+  .project-card__image-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 548 / 330;
+  }
+
+  .project-card__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card__info {
+    width: 100%;
+    height: 120px;
   }
 }
 
