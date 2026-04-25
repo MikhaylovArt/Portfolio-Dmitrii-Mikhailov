@@ -3266,6 +3266,120 @@ body {
 }
 
 /* ================================
+   TABLET HEADER / PROJECT SPACING
+   ================================ */
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  /* Header */
+  .topbar {
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    transform: none;
+    z-index: 100000;
+    background: rgba(253, 253, 253, 0.96);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 rgba(26, 26, 26, 0.08);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Header */
+  .topbar {
+    height: 60px;
+    min-width: 0;
+  }
+
+  .topbar__left {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .traffic-lights {
+    width: 88px;
+    flex: 0 0 88px;
+    gap: 7px;
+  }
+
+  .traffic-lights__dot {
+    width: 11px;
+    height: 11px;
+  }
+
+  .topbar__nav {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .topbar__cell {
+    height: 60px;
+  }
+
+  .topbar__home {
+    width: 64px;
+    flex: 0 0 64px;
+  }
+
+  .topbar__link {
+    min-width: 86px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .topbar__plus {
+    display: none;
+  }
+
+  .topbar__right {
+    flex: 0 0 auto;
+    padding: 0 10px;
+  }
+
+  .lang-switcher {
+    gap: 4px;
+    padding: 2px;
+  }
+
+  .lang-switcher__btn {
+    height: 36px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .lang-switcher__flag {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1180px) and (orientation: landscape) {
+  /* Header */
+  .topbar {
+    height: 64px;
+  }
+
+  .topbar__cell {
+    height: 64px;
+  }
+
+  /* About */
+  .about-section {
+    margin-bottom: 120px;
+  }
+
+  .about-clients {
+    margin-top: 36px;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding-top: 136px;
+  }
+}
+
+/* ================================
    TABLET - max-width: 991px
    ================================ */
 
