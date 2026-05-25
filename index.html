@@ -251,7 +251,44 @@
         <path class="hero-eye-lines__stroke hero-eye-lines__stroke--2" d="M20 60 L80 60" />
         <path class="hero-eye-lines__stroke hero-eye-lines__stroke--3" d="M10 80 L40 100" />
       </svg>
-    </div>
+</div>
+
+<div class="page-curl" aria-label="Easter eggs checklist" data-i18n-aria-label="easterEggs.checklistAria">
+  <div class="page-curl__checklist">
+    <h3 class="page-curl__title" data-i18n="easterEggs.checklistTitle">Easter eggs checklist</h3>
+
+    <ul class="page-curl__list">
+      <li class="page-curl__item" data-egg-item="macClose">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.macClose">Try to close the website using navigation panel</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="heroComments">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.heroComments">Click through all hero comments</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="undo">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.undo">Press Ctrl + Z / Cmd + Z</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="grid">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.grid">Press G to show the project grid</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="aboutDrag">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.aboutDrag">Try to move the tags in the About Me section</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="projectDrag">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.projectDrag">Try to move a project card</span>
+      </li>
+      <li class="page-curl__item" data-egg-item="contactDrag">
+        <span class="page-curl__check" aria-hidden="true"></span>
+        <span class="page-curl__text" data-i18n="easterEggs.checklist.contactDrag">Try to move the blocks in the Let's talk about section</span>
+      </li>
+    </ul>
+  </div>
+</div>
 
     <button class="contact-btn" data-i18n="hero.contactButton">
       Contact me
@@ -1036,7 +1073,18 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       easterEggs: {
         undoToast: "Nothing to undo. The design is already perfect.",
-        commentsResolved: "Comments resolved."
+        commentsResolved: "Comments resolved.",
+        checklistAria: "Easter eggs checklist",
+        checklistTitle: "Easter eggs checklist",
+        checklist: {
+          macClose: "Try to close the website using navigation panel",
+          heroComments: "Click through all hero comments",
+          undo: "Press Ctrl + Z / Cmd + Z",
+          grid: "Press G to show the project grid",
+          aboutDrag: "Try to move the tags in the About Me section",
+          projectDrag: "Try to move a project card",
+          contactDrag: "Try to move the blocks in the Let's talk about section"
+        }
       }
     },
     ru: {
@@ -1150,7 +1198,18 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       easterEggs: {
         undoToast: "Отменять нечего. Тут уже красиво.",
-        commentsResolved: "Комментарии закрыты."
+        commentsResolved: "Комментарии закрыты.",
+        checklistAria: "Чеклист пасхалок",
+        checklistTitle: "Чеклист пасхалок",
+        checklist: {
+          macClose: "Попробуйте закрыть сайт через панель навигации",
+          heroComments: "Прокликайте все комментарии в hero",
+          undo: "Нажмите Ctrl + Z / Cmd + Z",
+          grid: "Нажмите G, чтобы показать сетку проекта",
+          aboutDrag: "Попробуйте подвигать теги в блоке обо мне",
+          projectDrag: "Попробуйте подвигать карточку проекта",
+          contactDrag: "Попробуйте подвигать блоки в давайте обсудим"
+        }
       }
     }
   };
@@ -1235,19 +1294,75 @@ document.addEventListener("DOMContentLoaded", () => {
   window.setLanguage = setLanguage;
   window.getSiteTranslation = (key, lang = window.currentSiteLanguage || "en") => getTranslation(lang, key);
 
+  function detectInitialLanguage() {
+    const browserLanguages = navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language].filter(Boolean);
+    const ruLanguageCodes = ["ru", "be", "kk", "ky", "uz", "tg", "tk", "hy", "az", "mo"];
+    const hasRuRegionLanguage = browserLanguages.some((language) => {
+      const code = language.toLowerCase().split("-")[0];
+      return ruLanguageCodes.includes(code);
+    });
+
+    if (hasRuRegionLanguage) return "ru";
+
+    const ruRegionTimeZones = new Set([
+      "Europe/Moscow",
+      "Europe/Kaliningrad",
+      "Europe/Samara",
+      "Europe/Saratov",
+      "Europe/Ulyanovsk",
+      "Europe/Astrakhan",
+      "Europe/Volgograd",
+      "Europe/Kirov",
+      "Europe/Minsk",
+      "Europe/Chisinau",
+      "Asia/Yekaterinburg",
+      "Asia/Omsk",
+      "Asia/Novosibirsk",
+      "Asia/Barnaul",
+      "Asia/Tomsk",
+      "Asia/Krasnoyarsk",
+      "Asia/Irkutsk",
+      "Asia/Yakutsk",
+      "Asia/Vladivostok",
+      "Asia/Magadan",
+      "Asia/Sakhalin",
+      "Asia/Kamchatka",
+      "Asia/Anadyr",
+      "Asia/Almaty",
+      "Asia/Atyrau",
+      "Asia/Aqtau",
+      "Asia/Aqtobe",
+      "Asia/Oral",
+      "Asia/Qostanay",
+      "Asia/Qyzylorda",
+      "Asia/Bishkek",
+      "Asia/Tashkent",
+      "Asia/Samarkand",
+      "Asia/Dushanbe",
+      "Asia/Ashgabat",
+      "Asia/Baku",
+      "Asia/Yerevan"
+    ]);
+
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return ruRegionTimeZones.has(timeZone) ? "ru" : "en";
+  }
+
   langButtons.forEach((button) => {
     button.addEventListener("click", () => {
       setLanguage(button.dataset.lang);
     });
   });
 
-  let savedLanguage = "en";
+  let savedLanguage = "";
   try {
-    savedLanguage = localStorage.getItem(languageStorageKey) || "en";
+    savedLanguage = localStorage.getItem(languageStorageKey) || "";
   } catch (error) {
     console.warn("Unable to read language preference.", error);
   }
-  setLanguage(savedLanguage, { save: false });
+  setLanguage(savedLanguage || detectInitialLanguage(), { save: false });
 
   const easterRewardKeys = [
     "macClose",
@@ -1275,6 +1390,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function saveEasterProgress(progress) {
     Object.assign(easterProgress, progress);
+  }
+
+  function updateEasterChecklist(progress = readEasterProgress()) {
+    $$("[data-egg-item]").forEach((item) => {
+      item.classList.toggle("is-complete", Boolean(progress[item.dataset.eggItem]));
+    });
   }
 
   function openEasterRewardModal() {
@@ -1306,13 +1427,16 @@ document.addEventListener("DOMContentLoaded", () => {
       saveEasterProgress(progress);
     }
 
+    updateEasterChecklist(progress);
     checkEasterReward(progress);
   }
 
   window.easterEggTracker = {
     mark: markEasterEgg,
-    check: checkEasterReward
+    check: checkEasterReward,
+    progress: readEasterProgress
   };
+  updateEasterChecklist();
   checkEasterReward();
 
   if (easterRewardModal) {
